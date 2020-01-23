@@ -15,7 +15,14 @@
 	width:100px;
 	height:100px;
 	color:white;
-	background-color:black;}
+	background-color:black;
+	}
+.big_red {
+	width:100px;
+	height:100px;
+	color:white;
+	background-color:red;
+}
 .verybig {
 	width:150px;
 	height:150px;
@@ -28,6 +35,9 @@
 }
 .big:hover {
 	background-color: green;
+}
+.big_red:hover {
+	background-color: yellow;
 }
 .verybig:hover {
 	background-color: yellow;
