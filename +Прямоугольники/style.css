@@ -1,0 +1,37 @@
+/*все блоки внести в один стиль чтобы они действовали через один файл css*/
+.small {
+	width:50px;
+	height:50px;
+	color:white;
+	background-color:red;
+}
+.small_black {
+	width:50px;
+	height:50px;
+	color:white;
+	background-color:black;
+}
+.big {
+	width:100px;
+	height:100px;
+	color:white;
+	background-color:black;}
+.verybig {
+	width:150px;
+	height:150px;
+	color:white;
+	background-color:red;
+}
+/*hower - при наведении чтото изменяется */
+.small:hover {
+	background-color: yellow;
+}
+.big:hover {
+	background-color: green;
+}
+.verybig:hover {
+	background-color: yellow;
+}
+.small_black:hover {
+	background-color: green;
+}
