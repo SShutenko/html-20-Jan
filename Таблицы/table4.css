@@ -1,11 +1,45 @@
-table[cellspacing] {
-	border: 7px solid green;
+/*
+table[class="first"] td {
+	border: 5px solid green;
+	background-color: red;
 }
-table[class=second] {
-	border: 3px solid blue;
+table[class="second"] td {
+	border: 5px solid blue;
 	background-color: yellow;
 }
 td {
 	width: 70px;
 	height: 50px;
+}
+
+th, td {
+	width: 70px;
+	height: 50px;
+}
+.first th {
+	font-size: 25px;
+	border: 5px solid red;
+}
+.second th {
+	font-size: 25px;
+	border: 5px solid yellow;
+}
+.first td {
+	font-size: 25px;
+	border: 5px solid green;
+}
+.second td {
+	font-size: 25px;
+	border: 5px solid blue;
+}*/
+td[colspan="2"] {
+	background-color: red;
+}
+td[colspan="3"] {
+	background-color: yellow;
+}
+td {
+	border:1px solid black;
+	width:100px;
+	height:100px;
 }

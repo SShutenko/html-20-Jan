@@ -113,7 +113,7 @@ div {
 }
 .tel {
 	background-color: #1E90FF;
-	width: 310px;
+	width: calc(100% - 90px);
 	padding-left: 90px;
 	float: left;
 	font-size: 22px;
@@ -124,3 +124,4 @@ div {
 	content: '\2706';
 	color: white;
 }
+
