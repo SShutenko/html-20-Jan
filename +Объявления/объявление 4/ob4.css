@@ -1,0 +1,60 @@
+.conteiner {
+	width: 400px;
+	height: 480px;
+	border: 2px solid black;
+	border-radius: 20px;
+	font-family: Arial, sans-serif;
+}
+.s-bar {
+	width: 9%;
+	height: 100%;
+	border-radius: 16px 12px 0 16px;
+	background-color: blue;
+	float: left;
+}
+.summ {
+	width: 91%;
+	height: 100%;
+	float: left;
+}
+.dimage {
+	float:left;
+}
+.image {
+	width: 145px;
+	height: 40px;
+}
+.OOO {
+	float: right;
+	width: 215px;
+	height: 40px;
+	text-align: right;
+	color:white;
+	background-color: blue;
+	border-radius: 10px 16px 10px 10px;
+}
+.vlist {
+	margin-left: -37px;
+}
+li {
+	list-style-type: none;
+}
+li:before {
+	color: red;
+	content: "\2022";
+}
+.list {
+	float: left;
+	clear:left;
+	font-size: 25px;
+}
+.footer {
+	width: 100%;
+	float:left;
+	color:white;
+	background-color: blue;
+	text-align: center;
+	font-size: 18px;
+	height: 67px;
+	border-radius: 0 10px 16px 0;
+}

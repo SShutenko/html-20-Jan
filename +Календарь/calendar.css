@@ -1,0 +1,41 @@
+table {
+	text-align: center;
+	font-size: 37px;
+	margin: auto;
+	width: 95%;
+	height: 500px;
+	border-spacing: 0 0;
+}
+.hz {
+	border-bottom: 1px solid black;
+}
+td:first-of-type {
+	color: gray;
+	font-size: 30px;
+}
+td:nth-of-type(7), th:nth-of-type(7) {
+	color: red;
+}
+td:nth-of-type(7):hover, td:nth-of-type(8):hover, .holiday:hover {
+	color: yellow;
+	font-size: 40px;
+	background-color: black;
+	border: 5px dashed yellow;
+}
+td:nth-of-type(8), th:nth-of-type(8) {
+	color: red;
+}
+.holiday {
+	color:red;
+}
+th {
+	font-size: 20px;
+	font-weight: normal;
+}
+.th1 th {
+	font-size: 22px;
+	font-weight: bold;
+}
+.late {
+	font-size: 17px;
+}

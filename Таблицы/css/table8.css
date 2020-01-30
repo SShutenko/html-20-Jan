@@ -1,0 +1,27 @@
+td {
+	width: 80px;
+	height: 80px;
+	border: 2px solid black;
+}
+td[rowspan="2"] {
+	background-color: green;
+}
+td[rowspan="3"] {
+	background-color: blue;
+}
+td:hover {
+	background-color: pink;
+}
+td[rowspan="2"]:hover {
+	background-color: grey;
+}
+td[rowspan="3"]:hover {
+	background-color: black;
+	border: 10px dashed yellow;
+}
+td[rowspan="4"]:hover {
+	background: url(../sml.png);
+	background-size: 82px;
+	background-repeat: no-repeat;
+	background-position: center;
+}

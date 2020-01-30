@@ -2,260 +2,110 @@
 div {
 	color:white;
 }
-.small_red {
+.small {
 	width:50px;
 	height:50px;
+}
+.red {
 	background-color:red;
 }
-.small_black {
-	width:50px;
-	height:50px;
+.black {
 	background-color:black;
 }
-.small_green {
-	width:50px;
-	height:50px;
+.green {
 	background-color:green;
 }
-.long_red_gor {
+.long_gor {
 	width:150px;
 	height:50px;
-	background-color:red;
 }
-.big_black {
+.big {
 	width:100px;
 	height:100px;
-	background-color:black;
-	}
-.big_red {
-	width:100px;
-	height:100px;
-	background-color:red;
 }
-.verybig_red {
+.verybig {
 	width:150px;
 	height:150px;
-	background-color:red;
 }
-.verybig_black {
-	width:150px;
-	height:150px;
-	background-color:black;
-}
-.long_verybig_red {
-	background-color:red;
+.long_verybig {
 	width:300px;
 	height:150px;
 }
-.big_15x10_red {
+.big_15x10 {
 	width:150px;
 	height:100px;
-	background-color:red;
 }
-.big_20x20_red {
+.big_20x20 {
 	width:200px;
 	height:200px;
-	background-color:red;
 }
-.long_5x15_green {
+.long_5x15 {
 	 width:50px;
 	 height:150px;
-	 background-color:green;
 }
-.long_5x10_red {
+.long_5x10 {
 	width:50px;
 	height:100px;
-	background-color:red;
 }
-.long_5x10_green {
-	width:50px;
-	height:100px;
-	background-color:green;
-}
-.long_5x10_black {
-	width:50px;
-	height:100px;
-	background-color:black;
-}
-.long_green {
+.long {
 	width:100px;
 	height:50px;
-	background-color:green; 
 }
-.long_10x5_red {
+.long_10x5 {
 	width:100px;
 	height:50px;
-	background-color:red;
 }
-.med_7x7_red {
+.med_7x7 {
 	width:70px;
 	height:70px;
-	background-color:red;
 }
-.big_12x12_red {
+.big_12x12 {
 	width:120px;
 	height:120px;
-	background-color:red;
 }
-.big_13x13_red {
+.big_13x13 {
 	width:130px;
 	height:130px;
-	background-color:red;
 }
-.big_22x22_red {
+.big_22x22 {
 	width:220px;
 	height:220px;
-	background-color:red;
 }
-.med_6x6_red {
+.med_6x6 {
 	width:60px;
 	height:60px;
-	background-color:red;
 }
-.med_6x6_black {
-	width:60px;
-	height:60px;
-	background-color:black;
-}
-.little_red {
+.little {
 	width:35px;
 	height:35px;
-	background-color:red;
 }
-.little_black {
-	width:35px;
-	height:35px;
-	background-color:black;
-}
-.med_8x8_black {
-	background-color:black;
+.med_8x8 {
 	width:80px;
 	height:80px
 }
-.little_4x4_black {
+.little_4x4 {
 	width:40px; 
 	height:40px;
-	background-color:black;
-	}
-.little_4x4_red {
-	width:40px; 
-	height:40px;
-	background-color:red;
 }
-.med_long_red {
+.med_long {
 	width:60px;
 	height:40px;
-	background-color:red;
 }
-.med_long_black {
-	width:60px;
-	height:40px;
-	background-color:black;
-}
-.veribig_24x24_red {
+.veribig_24x24 {
 	width:240px;
 	height:240px;
-	background-color:red;
 }
-.big_green {
-	background-color:green;
+.bigl {
 	width:180px;
 	height:120px;
 }
 	/*hower - при наведении чтото изменяется */
-.small_red:hover {
+.red:hover {
 	background-color: yellow;
 }
-.small_black:hover {
+.black:hover {
 	background-color: green;
 }
-.small_green:hover {
-	background-color: purple;
-}
-.long_red_gor:hover {
-	background-color: yellow;
-}
-.big_red:hover {
-	background-color: yellow;
-}
-.big_black:hover {
-	background-color: green;
-}
-.verybig_red:hover {
-	background-color: yellow;
-}
-.verybig_black:hover {
-	background-color: green;
-}
-.long_verybig_red:hover {
-	background-color: yellow;
-}
-.big_15x10_red:hover {
-	background-color: yellow;
-}
-.big_20x20_red:hover {
-	background-color: yellow;
-}
-.long_green:hover {
-	background-color: purple;
-}
-.long_5x15_green:hover {
-	background-color: purple;
-}
-.long_5x10_red:hover {
-	background-color: yellow;
-}
-.long_5x10_green:hover {
-	background-color: purple;
-}
-.long_5x10_black:hover {
-	background-color: green;
-}
-.long_10x5_red:hover {
-	background-color: yellow;
-}
-.med_7x7_red:hover {
-	background-color: yellow;
-}
-.big_12x12_red:hover {
-	background-color: yellow;
-}
-.big_13x13_red:hover {
-	background-color: yellow;
-}
-.big_22x22_red:hover {
-	background-color: yellow;
-}
-.med_6x6_red:hover {
-	background-color: yellow;
-}
-.little_red:hover {
-	background-color: yellow;
-}
-.med_6x6_black:hover {
-	background-color: green;
-}
-.little_black:hover {
-	background-color: green;
-}
-.med_8x8_black:hover {
-	background-color: green;
-}
-.little_4x4_black:hover {
-	background-color: green;
-}
-.little_4x4_red:hover {
-	background-color: yellow;
-}
-.med_long_red:hover {
-	background-color: yellow;
-}
-.med_long_black:hover {
-	background-color: green;
-}
-.veribig_24x24_red:hover {
-	background-color: yellow;
-}
-.big_green:hover {
+.green:hover {
 	background-color: purple;
 }

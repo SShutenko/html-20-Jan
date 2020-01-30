@@ -1,0 +1,38 @@
+td {
+	width: 80px;
+	height: 80px;
+	border: 2px solid black;
+}
+td[rowspan="2"] {
+	border: 7px solid green;
+}
+td[rowspan="3"] {
+	border: 7px solid blue;
+}
+td[colspan="2"] {
+	background-color: red;
+}
+td[colspan="3"] {
+	background-color: yellow;
+}
+td:hover {
+	background-color: pink;
+}
+td[rowspan="2"]:hover {
+	background-color: #00FF7F;
+	border: 10px dotted black;
+}
+td[rowspan="3"]:hover {
+	background-color: black;
+	border: 10px groove #808000;
+}
+td[colspan="2"]:hover {
+	background: url(../sml.png);
+	background-size: 82px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+td[colspan="3"]:hover {
+	background-color: #FFA500;
+	border: 10px ridge #FF00FF;
+}

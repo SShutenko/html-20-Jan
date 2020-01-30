@@ -1,0 +1,23 @@
+td, th {
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
+}
+table[class="first"] th {
+	border: 7px solid red;
+}
+table[class="first"] td {
+	border: 7px solid green;
+}
+table[class="second"] th {
+	border: 7px solid yellow;
+}
+table[class="second"] td {
+	border: 7px solid blue;
+}
+th:hover {
+	background-color: pink;
+}
+td:hover {
+	background-color: purple;
+}

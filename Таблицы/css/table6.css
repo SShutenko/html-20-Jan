@@ -1,0 +1,56 @@
+th, td {
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
+}
+table[class="first und red"] th {
+	border: 7px solid green;
+	text-decoration: underline;
+}
+table[class="first und red"] td {
+	border: 7px solid green;
+	text-decoration: underline;
+	background-color: red;
+	color: green;
+}
+table[class="second yellow"] th {
+	border: 7px solid blue;
+	text-align: right;
+}
+table[class="second yellow"] td {
+	border: 7px solid blue;
+	text-align: right;
+	background-color: yellow;
+	color: blue;
+}
+.und th:hover {
+	background-color: pink;
+	font-size: 50px;
+	border: 5px dashed black;
+	text-decoration: none;
+	text-align: left;
+}
+.yellow th:hover {
+	background-color: pink;
+	font-size: 50px;
+	border: 5px dashed black;
+	text-align: center;
+	text-decoration: underline;
+	color: blue;
+}
+.red td:hover {
+	background-color: purple;
+	font-size: 60px;
+	border: 5px double black;
+	text-decoration: none;
+	text-align: right;
+	color: yellow;
+}
+.yellow td:hover {
+	background-color: black;
+	font-size: 60px;
+	border: 5px double yellow;
+	text-decoration: overline;
+	text-align: left;
+	color: yellow;
+}

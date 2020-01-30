@@ -1,0 +1,18 @@
+td {
+	width: 80px;
+	height: 80px;
+}
+table[class="first red"] td {
+	border: 7px solid green;
+	background-color: red;
+}
+table[class="second yellow"] td {
+	border: 7px solid blue;
+	background-color: yellow;
+}
+.red td:hover {
+	background-color: pink;
+}
+.yellow td:hover {
+	background-color: black;
+}

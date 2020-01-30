@@ -1,0 +1,64 @@
+.fon {
+	height: 500px;
+	width: 450px;
+}
+.conteiner {
+	font-family: Arial, sans-serif;
+	height: 420px;
+	width: 370px;
+	position: absolute;
+	top: 140px;
+	left: 50px;
+}
+.coc {
+	font-size: 30px;
+	font-weight: bold;
+}
+.list, .list2 {
+	margin-left: -15px;
+}
+.top-1, .top-2 {
+	margin-top: 0px;
+}
+.predl, .footer {
+	text-shadow: black 1px 0 1px;
+	color: #1E90FF;
+	font-size: 18px;
+}
+.footer {
+	text-align: center;
+	margin: 10px 0;
+}
+.predl {
+	margin-left: 120px;
+}
+.support {
+	margin: 40px 0;
+}
+.support li, .header li {
+	list-style-type: none;
+}
+.support li:before {
+	color: #1E90FF;
+	content: "\2022";
+	padding-right: 5px;
+}
+.header li:before {
+	color: #1E90FF;
+	content: "\2714";
+}
+.time {
+	position: absolute;
+	width: 170px;
+	height: 70px;
+	left: 250px;
+	top: 60px;
+}
+.dikaya {
+	position: absolute;
+	width: 170px;
+	height: 70px;
+	left: 60px;
+	top: 60px;
+}
+/*# sourceMappingURL=ob5.css.map */
