@@ -37,11 +37,8 @@
 	margin-left: -37px;
 }
 li {
-	list-style-type: none;
+	font-size: 25px;
 }
-li:before {
-	color: red;
-	content: "\2022";
 }
 .list {
 	float: left;

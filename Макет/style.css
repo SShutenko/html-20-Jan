@@ -138,6 +138,7 @@ a:hover {
 	width: 340px
 }
 .b_ss {
+	display: block;
 	text-decoration: none;
 	color: #00BFFF;
 }

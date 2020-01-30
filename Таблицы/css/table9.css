@@ -12,6 +12,9 @@ td[rowspan="3"] {
 td[colspan="2"] {
 	background-color: red;
 }
+td[colspan="2"]:not([rowspan="2"]) {
+	background-color: black;
+}
 td[colspan="3"] {
 	background-color: yellow;
 }
