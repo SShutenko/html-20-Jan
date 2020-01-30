@@ -5,53 +5,15 @@
 body {
 	width: 760px;
 }
-.header {
-	height: 100px;
-	background-color: black;
-}
-.DS {
-	width: 250px;
-	height: 50px;
-	margin: 25px 0 25px 25px;
-	font-size: 35px;
-	color: white;
-	float: left;
-}
-.list {
-	float: right;
-	margin: 30px 25px 0 0;
-}
-li {
-	display: inline;
-	margin-right:10px;
-}
-a {
-	text-decoration: none;
-	color: white;
-	font-size: 14px;
-}
-a:hover {
-	color: #00FFFF;
-	font-size: 14px;
-}
 					/*main*/
-.h1 {
-	color: grey;
-	font-weight: normal;
-}
-.img1 {
-	width: 24px;
-	height: 24px;
-	margin: 0 5px;
-}
+
 .text {
 	padding:10px 0;
 	font-size: 20px;
 	border-bottom: 2px dotted grey;
 	border-top: 2px dotted grey;
 }
-.WMO, 
-.main_a, 
+.WMO,  
 .text, 
 .comm_futer {
 	margin:0 25px;

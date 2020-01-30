@@ -1,0 +1,17 @@
+.header_menu {
+	float: right;
+	margin: 30px 25px 0 0;
+}
+.header_menu li {
+	display: inline;
+	margin-right:10px;
+}
+.header_menu a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+}
+.header_menu a:hover {
+	color: #00FFFF;
+	font-size: 14px;
+}
