@@ -1,0 +1,36 @@
+.body {
+	font-family: Arial, sans-serif;
+}
+.aside {
+	height: 900px;
+	font-size: 18px;
+	float: left;
+	border-top: 4px solid black;
+	margin:0 20px;
+}
+.aside_list {
+	margin: 0;
+	padding-left: 0;
+}
+.aside_list li {
+	list-style-position: inside;
+	padding: 10px 20px;
+	border-bottom: 4px solid black;
+	border-right: 4px solid black;
+	border-left: 4px solid black;
+}
+li:hover {
+	background-color: grey;
+	color:white;
+}
+.main {
+	margin: 10px 20px 20px 0;
+	float: left;
+}
+.footer {
+	float:left;
+	clear:left;
+	border-top: 2px solid black;
+	margin: 10px 20px;
+	width: 95%;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tester</title>
+	<script>
+	let x=10;/*запись числа 10 в переменную х*/
+	function minus() {
+	let e=document.getElementById("out");
+	e.innerHTML=x-1;
+	x=x-1;
+	}
+	function plus() {
+	let e=document.getElementById("out");
+	e.innerHTML=x+1;
+	x=x+1;
+	console.log(x);
+	}
+	/*взять значение х прибавить единицу и записать обратно в х*/
+	</script>
+	</head>
+<body>
+<div id="out"></div>
+<form>
+<input type="button" onclick="plus()">+1
+<input type="button" onclick="minus()">-1
+</form>
+</body>
+</html>

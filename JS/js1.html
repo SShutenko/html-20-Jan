@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tester</title>
+	<style>
+	div {
+	width: 250px;
+	height: 250px;
+	float: left;
+	}
+	.block1 {
+	background-color: red;
+	}
+	.block2 {
+	background-color: black;
+	}
+	.block3 {
+	background-color: pink;
+	}
+	.block4 {
+	background-color: yellow;
+	}
+	.block5 {
+	background-color: blue;
+	}
+	</style>
+	<script>
+	function right() {
+	console.log("right");
+	let e=document.querySelector(".block1");
+	e.style.backgroundColor="blue";
+	e.style.width="100px";
+	e.style.height="100px";
+	}
+	function left() {
+	/*при нажатии на левую клавишу нужно чтобы блок красный спятался, черный встал на его место и появился розовый!
+	изначально видны только красный и черный блоки!*/
+	console.log("left");
+	let e=document.querySelector(".block1");
+	e.style.backgroundColor="red";
+	e.style.width="250px";
+	e.style.height="250px";
+	}
+	</script>
+</head>
+<body>
+<div class="block1">&nbsp;</div>
+<div class="block2"></div>
+<div class="block3"></div>
+<div class="block4"></div>
+<div class="block5"></div>
+<div onclick="right()">&lt;</div>
+<div onclick="left()">&gt;</div>
+</body>
+</html>
