@@ -1,0 +1,24 @@
+.h1 {
+	float:left;
+	margin: 0 0 0 20px;
+}
+.menu {
+	float:right;
+	margin: 20px;
+	width: 700px;
+}
+.menu li {
+	display: inline-block;
+	font-size: 18px;
+}
+.menu_none1::before {
+	content: "\2013";
+	padding: 15px;
+}
+li:hover {
+	transform: scale(1.1);
+	font-weight: bold;
+}
+.horizontal {
+	height: 100px;
+}
