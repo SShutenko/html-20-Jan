@@ -1,0 +1,46 @@
+.header {
+	width: 100%;
+	float: left;
+	border-bottom: 2px solid black;
+	height: 150px;
+}
+.side {
+	margin-top: 10px;
+	float: left;
+	clear: left;
+}
+.menu {
+	position: absolute;
+	top: 107px;
+}
+.menu li {
+	display: inline;
+}
+.h1 {
+	float: left;
+	margin-left: 20px;
+}
+.menu_list {
+	padding-left: 20px;
+	margin: 20px 0 10px 0;
+}
+li {
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	padding: 10px;
+	margin: 0;
+	font-size: 20px;
+}
+li:hover {
+	font-size: 25px;
+	padding: 25px 2px 10px 2px;
+	/*border-bottom: 3px solid white;*/
+	background-color: grey;
+}
+.side {
+	margin-left: 20px;
+}
+a {
+	padding: 7px;
+}

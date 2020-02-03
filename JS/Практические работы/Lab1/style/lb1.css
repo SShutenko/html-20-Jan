@@ -1,0 +1,13 @@
+.out {
+	white-space: pre;
+	font-family: monospace;
+	background-color: pink;
+	float: left;
+}
+.butt {
+	float: left;
+	clear:left;
+}
+.text {
+	width: 200px;
+}
