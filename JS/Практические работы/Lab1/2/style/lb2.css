@@ -1,0 +1,9 @@
+div {
+	margin: 5px auto;
+	width: 535px;
+}
+.out {
+	height: 100px;
+	background-color: pink;
+	font-size: 20px;
+}

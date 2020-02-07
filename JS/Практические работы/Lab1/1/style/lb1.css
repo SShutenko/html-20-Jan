@@ -1,0 +1,17 @@
+.test, .tester {
+	width: 500px;
+	height: 250px;
+}
+.test, .form {
+	margin: 10px auto;
+}
+.form {
+	width: 500px;
+}
+.tester {
+	white-space: pre;
+	font-family: monospace;
+	background-color: pink;
+	vertical-align: middle;
+	display: table-cell;
+}
