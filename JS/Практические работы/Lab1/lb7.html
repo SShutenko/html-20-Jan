@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 7</title>
+	</head>
+<body>
+	<div id="out">
+		0
+	</div>
+	<input id="in">
+	<input id="in1">
+	<button type="button" onclick="hb()">
+			Тыкалка
+	</button>
+	<script>
+	let initializ=document.getElementById("in");
+	let initializ1=document.getElementById("in1");
+	let out=document.getElementById("out");
+	function hb() {
+	let inI=initializ.value;
+	let in1=initializ1.value;
+	out.innerHTML=in1+" "+inI;
+	}
+	</script>
+</body>
+</html>

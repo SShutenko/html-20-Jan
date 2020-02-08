@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 12</title>
+	</head>
+<body>
+	<svg id="out" width="500px" height="500px">
+		0
+	</svg>
+	<input id="in" type="range" max="254" min="50" step="5" onchange="hb()">
+	<input id="in1" type="range" max="356" min="50" step="5" onchange="hb()">
+	<input id="in2" type="range" max="100" min="40" step="5" onchange="hb()">
+	<select id="st" onchange="hb()">
+		<option>yellow</option>
+		<option>green</option>
+		<option>#cc6600</option>
+	</select>
+	<button type="button" onclick="hb()">
+			Тыкалка
+	</button>
+	<script>
+	let initializ=document.getElementById("in");
+	let initializ1=document.getElementById("in1");
+	let initializ2=document.getElementById("in2");
+	let selected=document.getElementById("st")
+	let out=document.getElementById("out");
+	function hb() {
+	let inI=initializ.value;
+	let in1=initializ1.value;
+	let in2=initializ2.value;
+	let stI=selected.value;
+	out.innerHTML=`<circle cx='${inI}' cy='${in1}' r='${in2}' fill='${stI}'/>`
+	}
+	</script>
+</body>
+</html>

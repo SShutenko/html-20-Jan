@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 12</title>
+	</head>
+<body>
+	<div id="out"></div>
+	<input type="text" id="inp">
+		<button type="button" onclick="hb()">
+			Тыкалка
+	</button>
+	<script>
+	let result=document.getElementById("out");
+	let inpi=document.getElementById("inp");
+	function hb() {
+	let ma1=parseFloat(inpi.value);
+	result.innerHTML=ma1.toFixed(4);
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 4</title>
+	</head>
+<body>
+	<div id="out">
+		0
+	</div>
+	<input id="in">
+	<button type="button" onclick="hb()">
+			Тыкалка
+	</button>
+	<script>
+	let initializ=document.getElementById("in");
+	let out=document.getElementById("out");
+	function hb() {
+	let inI=initializ.value;
+	out.innerHTML="Мы стремимся к "+inI;
+	}
+	</script>
+</body>
+</html>
