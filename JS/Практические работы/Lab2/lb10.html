@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 10</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>xRad (угол в градусах):<input type="text" id="inp"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let e=document.getElementById("inp");
+			let result=document.getElementById("out");
+			function test() {
+				let xRad=e.value;
+				let aRad=(xRad*Math.PI)/180;
+				let aDeg=Math.sin(aRad);
+				result.innerHTML=aDeg.toFixed(4);
+			}
+			//10 минут, Math.sin(x), x - число радиан (НЕ градусов!)
+		</script>
+	</body>
+</html>

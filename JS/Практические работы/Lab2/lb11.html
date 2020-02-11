@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 11</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>yDeg (угол в градусах):<input type="text" id="inp"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let e=document.getElementById("inp");
+			let result=document.getElementById("out");
+			function test() {
+				let yDeg=e.value;
+				let Rad=(yDeg*Math.PI)/180;
+				let yRad=5*Math.cos(Rad);
+				result.innerHTML=yRad.toFixed(4);
+			}
+			//6 минут, Math.cos(x), x - число радиан (НЕ градусов!) задача 10 и 11 перепутанны значения в формулах и вводимых данных
+		</script>
+	</body>
+</html>
+Вычислить результат по формуле 5cos(yRad). Значение угла дано в градусах.

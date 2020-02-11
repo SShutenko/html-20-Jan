@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 4</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<input type="text" id="inp">
+		<button type="button" onclick="test()">
+			Тыкалка
+		</button>
+		<script>
+			let result=document.getElementById("out");
+			let velocityInKmH=document.getElementById("inp");
+			function test() {
+				let ma1=parseFloat(velocityInKmH.value);
+				let velocityInMS=ma1/3.6;
+				result.innerHTML=ma1.toFixed(2)+" км/ч это "+velocityInMS.toFixed(2)+" м/с";
+			}
+			//5 минут
+		</script>
+	</body>
+</html>

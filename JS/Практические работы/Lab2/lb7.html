@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 7</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>С&deg;:<input type="text" id="inp"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let tem=document.getElementById("inp");
+			let result=document.getElementById("out");
+			function test() {
+				let temperatureC=tem.value;
+				let temperatureF=(temperatureC*1.8)+32;
+				result.innerHTML=temperatureF.toFixed(4);
+			}
+			//11 минут, не работала формула, из за запятой вместо точки
+		</script>
+	</body>
+</html>

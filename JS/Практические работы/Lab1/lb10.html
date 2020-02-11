@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 10</title>
+</head>
+<body>
+	<p>Имя:</p>
+	<input id="in1">
+	<p>Фамилия:</p>
+	<input id="in2">
+	<p>Группа:</p>
+	<input id="in3">
+	<p>Ваш ID:</p>
+	<input id="in4">
+	<button type="button" onclick="hb()">
+		Тыкалка
+	</button>
+	<div id="out">
+		0
+	</div>
+	<script>
+		let first_name=document.getElementById("in1");
+		let last_name=document.getElementById("in2");
+		let group=document.getElementById("in3");
+		let $ID=document.getElementById("in4");
+		let out=document.getElementById("out");
+		function hb() {
+			let in1=first_name.value
+			let in2=last_name.value
+			let in3=group.value
+			let in4=$ID.value
+			out.innerHTML="SELECT "+in1+", "+in2+", "+in3+"<br>"+"FROM students WHERE student_id = "+"\'"+in4+"\';";
+		}
+		//15 минут, непонятное условие, неуверен, что правильно понял
+	</script>
+</body>
+</html>

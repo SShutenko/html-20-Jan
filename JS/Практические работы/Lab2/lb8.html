@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 8</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>aDeg (угол в градусах):<input type="text" id="inp"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let degrees=document.getElementById("inp");
+			let result=document.getElementById("out");
+			function test() {
+				let aDeg=degrees.value;
+				let aRad=(aDeg*Math.PI)/180
+				result.innerHTML=aRad.toFixed(4);
+			}
+			//5 минут
+		</script>
+	</body>
+</html>

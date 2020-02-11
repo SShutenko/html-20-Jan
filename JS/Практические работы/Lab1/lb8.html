@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 8</title>
+    </head>
+<body>
+    <div id="out">
+        хмайл ")"
+    </div>
+    <input id="in1">
+    <input id="in2">
+    <input id="in3">
+    <button type="button" onclick="hb()">
+            Тыкалка
+    </button>
+    <script>
+        let companyName=document.getElementById("in1");
+        let productName=document.getElementById("in2");
+        let productCost=document.getElementById("in3");
+        let out=document.getElementById("out");
+        function hb() {
+            let in1=companyName.value;
+            let in2=productName.value;
+            let in3=productCost.value;
+            let messagePart="Распродажа в "+in1+"!"+"<br>"+"Наши "+in2+" по супер цене. Всего "+in3+"!";
+            out.innerHTML="Задача 1910"+"<br>"+"Введите название компании:"+"<br>"+in1+"<br>"+"Введите наименование товара:"+"<br>"+in2+"<br>"+"Введите цену товара:"+"<br>"+in3+"<br>"+messagePart+"<br>"+"Торопитесь, предложение ограничено!";
+        }
+    // 22 минуты
+    </script>
+</body>
+</html>

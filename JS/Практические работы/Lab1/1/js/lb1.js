@@ -28,7 +28,7 @@ function test6() {
 };
 function test7() {
 	let e7=document.getElementById("out");
-	e7.innerHTML="Три девицы под окном"+
+	e7.innerHTML="Три девицы под окном\n"+
 	"Пряли поздно вечерком.\n"+
 	"\"Кабы я была царица, —\n"+
 	"Говорит одна девица, —\n"+

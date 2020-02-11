@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 9</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>aRad (угол в радианах):<input type="text" id="inp"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let e=document.getElementById("inp");
+			let result=document.getElementById("out");
+			function test() {
+				let aRad=parseFloat(e.value);
+				let aDeg=(180/Math.PI)*aRad
+				result.innerHTML=aRad.toFixed(4)+" радиан это "+aDeg.toFixed(4)+" градусов";
+			}
+			//10 минут перепутанны значения в таблице вводимые данные и результат, искал формулы сравнивал ответы.
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 6</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>height:<input type="text" id="inp"></p>
+		<p>width:<input type="text" id="inp2"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let temp=document.getElementById("inp");
+			let height=parseFloat(temp.value);
+			temp=document.getElementById("inp2");
+			let width=parseFloat(temp.value);
+			let result=document.getElementById("out");
+			function test() {
+				let area=height*width;
+				result.innerHTML="Задача 1976"+"<br>"+"Введите высоту прямоугольника"+"<br>"+height+"<br>"+"Введите ширину прямоугольника"+"<br>"+width+"<br>"+"Площадь прямоугольника со сторонами "+height+" и "+width+" равна "+area;
+			}
+			//15 минут
+		</script>
+	</body>
+</html>

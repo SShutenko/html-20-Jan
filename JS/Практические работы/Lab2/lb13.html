@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 13</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>aDeg (угол в градусах):<input type="text" id="inp"></p>
+		<p>bDeg (угол в градусах):<input type="text" id="inp1"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let e=document.getElementById("inp");
+			let e1=document.getElementById("inp1");
+			let result=document.getElementById("out");
+			function test() {
+				let aDeg=e.value;
+				let bDeg=e1.value;
+				let aRad=(aDeg*Math.PI)/180;
+				let bRad=(bDeg*Math.PI)/180;
+				let cosi=3*Math.sin(2*aRad)*Math.cos(3*bRad);
+				result.innerHTML=cosi.toFixed(4);
+			}
+			//2 минуты
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 14</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<p>Xa (координата x):<input type="text" id="inp"></p>
+		<p>Ya (координата y):<input type="text" id="inp1"></p>
+		<p>distance (длина линии):<input type="text" id="inp2"></p>
+		<p>angleDeg (дирекционный угол):<input type="text" id="inp3"></p>
+		<button type="button" onclick="test()">
+			TEST
+		</button>
+		<script>
+			let e=document.getElementById("inp");
+			let e1=document.getElementById("inp1");
+			let e2=document.getElementById("inp2");
+			let e3=document.getElementById("inp3");
+			let result=document.getElementById("out");
+			function test() {
+				let Xa=parseFloat(e.value);
+				let Ya=parseFloat(e1.value);
+				let distance=parseFloat(e2.value);
+				let angleDeg=parseFloat(e3.value);
+				let angleRad=(angleDeg*Math.PI)/180;
+				let dX=distance*Math.cos(angleRad);
+				let dY=distance*Math.sin(angleRad);
+				let Xb=Xa+dX;
+				let Yb=Ya+dY;
+				result.innerHTML="Приращение координат: Δx = "+dX.toFixed(4)+"; Δy = "+dY.toFixed(4)+"<br>"+"Координаты второй точки ("+Xb.toFixed(4)+";"+Yb.toFixed(4)+")";
+			}
+			//18 минут, не работал toFixed, вопрос, почему в одних случаях применял parseFloat в других нет, чтобы запустить toFixed
+		</script>
+	</body>
+</html>

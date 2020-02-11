@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 3</title>
+	</head>
+<body>
+	<div id="out" height="100px">
+		0
+	</div>
+	<button type="button" onclick="hb()">
+			Тыкалка
+	</button>
+	<script>
+		function hb() {
+			let accountBalance="0.37";
+			let paymentSite;
+			let messageText="Пора пополнить счет!"+"<br>";
+			messageText+="Баланс Вашего счета составляет ";
+			messageText+=accountBalance;
+			messageText+="руб.";
+			let e=document.getElementById("out");
+			e.innerHTML="Задача 7365"+"<br>"+messageText;
+		}
+		// 19 минут, долго разбирался почему \n не работает)
+	</script>
+</body>
+</html>

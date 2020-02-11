@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Задача 5</title>
+	</head>
+	<body>
+		<div id="out"></div>
+		<input type="text" id="inp">
+		<button type="button" onclick="test()">
+			Тыкалка
+		</button>
+		<script>
+			let result=document.getElementById("out");
+			let inp=document.getElementById("inp");
+			function test() {
+				let KmH=parseFloat(inp.value);
+				let knots=(KmH/2)+(KmH/20);
+				result.innerHTML=KmH.toFixed(2)+" км/ч это приблизительно "+knots.toFixed(2)+" узлов";
+			}
+			//20 минут ошибка в формуле перевода в узлы!
+		</script>
+	</body>
+</html>
