@@ -12,12 +12,14 @@
 			TEST
 		</button>
 		<script>
-			let temp=document.getElementById("inp");
-			let height=parseFloat(temp.value);
-			temp=document.getElementById("inp2");
-			let width=parseFloat(temp.value);
+			let e=document.getElementById("inp");	
+			let e2=document.getElementById("inp2");
 			let result=document.getElementById("out");
 			function test() {
+				let temp=e.value;
+				let height=temp;
+				temp=e2.value;
+				let width=temp;
 				let area=height*width;
 				result.innerHTML="Задача 1976"+"<br>"+"Введите высоту прямоугольника"+"<br>"+height+"<br>"+"Введите ширину прямоугольника"+"<br>"+width+"<br>"+"Площадь прямоугольника со сторонами "+height+" и "+width+" равна "+area;
 			}

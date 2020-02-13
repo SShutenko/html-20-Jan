@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 3</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X:<input type="" name="" id="inp"></p>
+	<button type="button" onclick="test1()">
+		TEST
+	</button>
+	<button type="button" onclick="test3()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		function test1() {
+			let X=e.value;
+			let i;
+			let temp=X;
+			temp+=X
+			temp+=X
+			temp+=X
+			temp+=X
+			temp+=X
+			temp+=X
+			document.getElementById("out")
+			.innerHTML="\'"+temp+"\'";
+		}
+		function test3() {
+			let X=e.value;
+			let i=0;
+			let temp="";
+			while (i<7) { //Условие продолжения работы
+				temp+=X;
+				i++;
+			}
+			document.getElementById("out")
+			.innerHTML="\'"+temp+"\'";
+		}
+		// решить задачу с помощью цикла for решить 6ю лабораторную до 7й задачи включительно, остальные как попрет
+	</script>
+</body>
+</html>

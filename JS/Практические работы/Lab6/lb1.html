@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 1</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A:<input type="" name="" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<button type="button" onclick="test1()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		function test() {
+			let A=parseFloat(e.value);
+			let i=A;
+			let temp="";
+			while (i<A+10) {
+				temp+="<br>"+i+"<br>---";
+				i++;
+			}
+			document.getElementById("out")
+			.innerHTML=temp;
+		}
+		function test1() {
+			let A=e.value;
+			let i=A;
+			let temp=i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			temp+="---<br>"+i+"<br>";
+			i++;
+			document.getElementById("out")
+			.innerHTML=temp;
+		}
+		// решить задачу с помощью цикла for
+	</script>
+</body>
+</html>

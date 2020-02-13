@@ -16,11 +16,11 @@
 		function test() {
 			let X=parseFloat(e.value);
 			let sqrt=61-X;
-			let result=3*Math.sqrt(sqrt);
-			if (sqrt>=0) {
+			if (61-X>=0) {
+				let result=3*Math.sqrt(sqrt);
 				out.innerHTML=result.toFixed(4);
 			} else {
-				out.innerHTML="Подкоренное выражение должно быть положительным!"
+				out.innerHTML="Подкоренное выражение должно быть положительным!";
 			}
 		}
 		// 5 минут
