@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 1</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>P: <input type="text" id="inp"></p>
+	<p>Q: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let P=parseFloat(e.value);
+			let Q=parseFloat(e2.value);
+			let diff;
+			if (P>=Q) {
+				diff=P-Q;
+				result.innerHTML="Максимальное "+P+", минимальное "+Q+". Разница "+diff;
+			} else {
+				diff=Q-P;
+				result.innerHTML="Максимальное "+Q+", минимальное "+P+". Разница "+diff;
+					}
+		}
+		// 5 минут
+	</script>
+</body>
+</html>
