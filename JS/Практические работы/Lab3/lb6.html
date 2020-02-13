@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 6</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let X=parseFloat(e.value);
+			let sqrt=Math.sqrt(X);
+			if (X>0) {
+				result.innerHTML=sqrt.toFixed(4);
+			} else {
+				result.innerHTML="Значение X должно быть положительным!"
+			}
+		}
+		// 5 минут
+	</script>
+</body>
+</html>

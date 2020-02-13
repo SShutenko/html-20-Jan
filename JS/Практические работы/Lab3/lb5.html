@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 5</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>radius: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let radius=parseFloat(e.value);
+			let volumeSphere=4*Math.PI*Math.pow(radius, 3)/3;
+			if (radius>0) {
+				result.innerHTML=volumeSphere.toFixed(4);
+			} else {
+				result.innerHTML="Значение radius должно быть положительным!";
+			}
+		}
+		// 5 минут, 18 строка можно заменить на (radius**3)
+	</script>
+</body>
+</html>

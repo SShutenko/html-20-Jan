@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 3</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>edge: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let edge=parseFloat(e.value);
+			let volumeCube=Math.pow(edge, 3);
+			if (edge>0) {
+				result.innerHTML=volumeCube;
+			} else {
+				result.innerHTML="Значение edge должно быть положительным!"
+			}
+		}
+		// 3 минуты
+	</script>
+</body>
+</html>

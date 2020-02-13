@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 7</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let out=document.getElementById("out");
+		function test() {
+			let X=parseFloat(e.value);
+			let sqrt=61-X;
+			let result=3*Math.sqrt(sqrt);
+			if (sqrt>=0) {
+				out.innerHTML=result.toFixed(4);
+			} else {
+				out.innerHTML="Подкоренное выражение должно быть положительным!"
+			}
+		}
+		// 5 минут
+	</script>
+</body>
+</html>

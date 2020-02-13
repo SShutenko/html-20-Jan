@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 9</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>x: <input type="text" id="inp"></p>
+	<p>y: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let x=parseFloat(e.value);
+			let y=parseFloat(e2.value);
+			let z=x+Math.sqrt(y);
+			let sqrt=-5*Math.sqrt(z);
+			if (z>=0, y>=0) {
+				result.innerHTML=sqrt.toFixed(4);
+			} else {
+				result.innerHTML="Подкоренное выражение должно быть неотрицательно!";
+			}
+		}
+	</script>
+</body>
+</html>

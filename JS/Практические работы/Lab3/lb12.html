@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 12</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>dividend: <input type="text" id="inp"></p>
+	<p>divider: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let dividend=parseFloat(e.value);
+			let divider=parseFloat(e2.value);
+			let quotient=Math.floor(dividend/divider);
+			let remainder=dividend%divider;
+			if (divider===0) {
+				result.innerHTML="Делитель не может быть равен 0!";
+			} else {
+				result.innerHTML="Делимое "+dividend+", делитель "+divider+", частное "+quotient+", остаток "+remainder;
+					}
+		}
+	</script>
+</body>
+</html>

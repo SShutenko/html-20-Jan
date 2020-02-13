@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 4</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>radius: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let radius=parseFloat(e.value);
+			let circumference=2*Math.PI*radius;
+			if (radius>0) {
+				result.innerHTML=circumference.toFixed(4);
+			} else {
+				result.innerHTML="Значение radius должно быть положительным!";
+			}
+		}
+		// 3 минуты
+	</script>
+</body>
+</html>

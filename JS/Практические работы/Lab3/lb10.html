@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 10</title>
+</head>
+<body>
+
+	<div id="out"></div>
+	<p>X<sub>a</sub>: <input type="text" id="inp"></p>
+	<p>Y<sub>a</sub>: <input type="text" id="inp2"></p>
+	<p>X<sub>b</sub>: <input type="text" id="inp3"></p>
+	<p>Y<sub>b</sub>: <input type="text" id="inp4"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let e4=document.getElementById("inp4");
+		let result=document.getElementById("out");
+		function test() {
+			let Xa=parseFloat(e.value);
+			let Ya=parseFloat(e2.value);
+			let Xb=parseFloat(e3.value);
+			let Yb=parseFloat(e4.value);
+			let z=Math.pow(Xb-Xa, 2)+Math.pow(Ya-Yb, 2);
+			let sqrt=Math.sqrt(z);
+			result.innerHTML=sqrt.toFixed(4);
+		}
+	</script>
+</body>
+</html>

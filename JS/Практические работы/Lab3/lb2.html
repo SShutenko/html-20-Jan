@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 2</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>edge: <input type="text" id="inp"></p>
+	<p>height: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let edge=parseFloat(e.value);
+			let height=parseFloat(e2.value);
+			let area=(edge*height)/2;
+			if(edge<=0) {
+				result.innerHTML="Значение edge должно быть положительным!";
+			} else if(height<=0) {
+				result.innerHTML="Значение height должно быть положительным!";
+			} else {
+				result.innerHTML=area.toFixed(2);
+			}
+		}
+		//5 минут
+	</script>
+</body>
+</html>
