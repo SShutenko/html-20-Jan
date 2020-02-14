@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 8</title>
+</head>
+<body>
+	<canvas id="square" width="150" height="150"></canvas>
+	<button type="button" onclick="test1()">
+		TEST1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST2
+	</button>
+	<button type="button" onclick="test3()">
+		TEST3
+	</button>
+	<button type="button" onclick="cleard()">
+		CLEAR
+	</button>
+	<script>
+		let sq=document.getElementById("square");
+		let square=sq.getContext("2d");
+		square.strokeStyle="red";
+		square.strokeRect(20,20,100,100);
+		function test1() {
+			let sq=document.getElementById("square");
+			let square=sq.getContext("2d");
+			square.strokeStyle="red";
+			square.strokeRect(10,10,130,130);
+		}
+		function test2() {
+			let sq=document.getElementById("square");
+			let square=sq.getContext("2d");
+			square.strokeStyle="red";
+			square.strokeRect(5,5,140,140);
+		}
+		function test3() {
+			let sq=document.getElementById("square");
+			let square=sq.getContext("2d");
+			square.fillStyle="red";
+			square.fillRect(0,0,150,150);
+			square.clearRect(5,5,140,140);
+		}
+		function cleard() {
+			square.clearRect(0, 0, 150, 150);
+		}
+	</script>
+</body>
+</html>

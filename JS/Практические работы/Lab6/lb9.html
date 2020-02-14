@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 8</title>
+</head>
+<body>
+	<canvas id="square" width="300" height="300"></canvas>
+	<button type="button" onclick="test1()">
+		TEST1
+	</button>
+	<button type="button" onclick="cleard()">
+		CLEAR
+	</button>
+	<script>
+		function test1() {
+			let sq=document.getElementById("square");
+			let square=sq.getContext("2d");
+			square.moveTo(50,10);
+			square.lineTo(60,10);
+			square.lineTo(60,60);
+			square.lineTo(130,60);
+			square.lineTo(130,40);
+			square.lineTo(140,40);
+			square.lineTo(140,70);
+			square.lineTo(130,70);
+			square.lineTo(130,140);
+			square.lineTo(110,140);
+			square.lineTo(110,130);
+			square.lineTo(120,130);
+			square.lineTo(120,100);
+			square.lineTo(60,100);
+			square.lineTo(60,140);
+			square.lineTo(40,140);
+			square.lineTo(40,130);
+			square.lineTo(50,130);
+			square.lineTo(50,100);
+			square.lineTo(40,100);
+			square.lineTo(40,50);
+			square.lineTo(10,50);
+			square.lineTo(10,30);
+			square.lineTo(30,30);
+			square.lineTo(30,20);
+			square.lineTo(50,20);
+			square.lineTo(50,10);
+			square.strokeStyle = "#FF0000";
+			square.lineWidth = "2";
+			square.stroke();
+		}
+		function cleard() {
+			square.width=square.width;
+		}
+	</script>
+</body>
+</html>

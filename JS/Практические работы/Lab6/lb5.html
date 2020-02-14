@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 5</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>V:<input type="" name="" id="inp"></p>
+	<button type="button" onclick="test1()">
+		TEST
+	</button>
+	<button type="button" onclick="test2()">
+		TEST
+	</button>
+	<button type="button" onclick="test3()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		function test1() {
+			let V=e.value;
+			let i=1;
+			let p="Таблица умножения на "+V+"<br>";
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			p+=i+" x "+V+" = "+i*V+"<br>";
+			i++;
+			document.getElementById("out").innerHTML=p;
+		}
+		function test2() {
+			let V=e.value;
+			let i=1;
+			let p="Таблица умножения на "+V+"<br>";
+			while (i<10) {
+				p+=i+" x "+V+" = "+i*V+"<br>";
+				i++;
+			}
+			document.getElementById("out").innerHTML=p;
+		}
+		function test3() {
+			let V=e.value;
+			let p="Таблица умножения на "+V+"<br>";
+			for (i=1; i<10; i++) {
+				p+=i+" x "+V+" = "+i*V+"<br>";
+			}
+			document.getElementById("out").innerHTML=p;
+		}
+	</script>
+</body>
+</html>

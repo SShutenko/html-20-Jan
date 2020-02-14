@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 4</title>
+</head>
+<body>
+	<div id="out"></div>
+	<button type="button" onclick="test1()">
+		TEST1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST2
+	</button>
+	<button type="button" onclick="test3()">
+		TEST3
+	</button>
+	<script>
+		let out=document.getElementById("out");
+		function test1() {
+			let i=0;
+			let gr=453;
+			let gramm="<table><tr><td>Фунты</td><td>Граммы</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			gramm+="<tr><td>"+i+"</td><td>"+gr*i+"</td>";
+			i++;
+			out.innerHTML=gramm;
+		}
+		function test2() {
+			let gramm="<table><tr><td>Фунты</td><td>Граммы</td>";
+			let i=1;
+			while (i<=20) {
+				gramm+="<tr><td>"+i+"</td><td>"+453*i+"</td>";
+				i++;
+			}
+			out.innerHTML=gramm;
+		}
+		function test3() {
+			let gramm="<table><tr><td>Фунты</td><td>Граммы</td>";
+			for(i=1; i<21; i++) {
+				gramm+="<tr><td>"+i+"</td><td>"+453*i+"</td>";
+			}
+			out.innerHTML=gramm;
+		}
+	</script>
+</body>
+</html>

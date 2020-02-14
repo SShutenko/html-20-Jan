@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 7</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X:<input type="" name="" id="inp"></p>
+	<button type="button" onclick="test1()">
+		TEST1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST2
+	</button>
+	<button type="button" onclick="test3()">
+		TEST3
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		function test1() {
+			let X=parseFloat(e.value);
+			let X1=parseFloat(e.value);
+			let i=1;
+			let temp=X+" ";
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			temp+=X+i*3+" ";
+			i++;
+			let n=10;
+			let temp1=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			temp1+=X1-n*4+" ";
+			n--;
+			document.getElementById("out").innerHTML=temp+"<br>"+temp1;
+		}
+		function test2() {
+			let X=parseFloat(e.value);
+			let X1=parseFloat(e.value);
+			let temp=X+" ";
+			for (i=1; i<11; i++) {
+				temp+=i*3+X+" ";
+			}
+			let temp1=" ";
+			for (n=10; n>-1; n--) {
+				temp1+=X1-n*4+" ";
+			}
+			document.getElementById("out")
+			.innerHTML=temp+"<br>"+temp1;
+		}
+		function test3() {
+			let X=parseFloat(e.value);
+			let X1=parseFloat(e.value);
+			let i=1;
+			let temp=X+" ";
+			while (i<11) {
+				temp+=i*3+X+" ";
+				i++;
+			}
+			let temp1=" ";
+			let n=10
+			while (n>-1) {
+				temp1+=X1-n*4+" ";
+				n--;
+			}
+			document.getElementById("out")
+			.innerHTML=temp+"<br>"+temp1;
+		}
+	</script>
+</body>
+</html>
