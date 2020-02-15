@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 14</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<button type="button" onclick="test2()">
+		TEST2
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let X=e.value;
+			if (X==="a") {
+				result.innerHTML="a"+"+"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h";
+			} else if (X==="b") {
+				result.innerHTML="a"+"<br>"+"b"+"+"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h";
+			} else if (X==="c") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"+"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h";
+			} else if (X==="d") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"+"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h";
+			} else if (X==="e") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"+"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h";
+			} else if (X==="f") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"+"+"<br>"+"g"+"<br>"+"h";
+			} else if (X==="g") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"+"+"<br>"+"h";
+			} else if (X==="h") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h"+"+";
+			} else if (X==="i") {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h"+"<br>"+"i"+"+";
+			} else {
+				result.innerHTML="a"+"<br>"+"b"+"<br>"+"c"+"<br>"+"d"+"<br>"+"e"+"<br>"+"f"+"<br>"+"g"+"<br>"+"h"+"i";
+			}
+		}
+		function test2() {
+			let X=e.value;
+			let temp="";
+			if (X==="a") {
+				temp+="a"+"+"+"<br>";
+			} else  {
+				temp+="a"+"<br>";
+			}
+			if (X==="b") {
+				temp+="b"+"+"+"<br>";
+			} else  {
+				temp+="b"+"<br>";
+			}
+			if (X==="c") {
+				temp+="c"+"+"+"<br>";
+			} else  {
+				temp+="c"+"<br>";
+			}
+			if (X==="d") {
+				temp+="d"+"+"+"<br>";
+			} else  {
+				temp+="d"+"<br>";
+			}
+			if (X==="e") {
+				temp+="e"+"+"+"<br>";
+			} else  {
+				temp+="e"+"<br>";
+			}
+			if (X==="f") {
+				temp+="f"+"+"+"<br>";
+			} else  {
+				temp+="f"+"<br>";
+			}
+			if (X==="g") {
+				temp+="g"+"+"+"<br>";
+			} else  {
+				temp+="g"+"<br>";
+			}
+			if (X==="h") {
+				temp+="h"+"+"+"<br>";
+			} else {
+				temp+="h"+"<br>";
+			}
+			if (X==="i") {
+				temp+="i"+"+"+"<br>";
+			} else {
+				temp+="i"+"<br>";
+			}	result.innerHTML=temp;
+		}
+		// сделать через for
+	</script>
+</body>
+</html>
