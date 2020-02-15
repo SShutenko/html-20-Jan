@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 3</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let diff=Math.abs(A);
+			result.innerHTML=diff;
+		}
+		// 2 минуты
+	</script>
+</body>
+</html>

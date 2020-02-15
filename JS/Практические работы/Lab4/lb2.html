@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 2</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>K: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let K=parseFloat(e.value);
+			let diff;
+			if (K>0) {
+				diff=Math.sqrt(K);
+				result.innerHTML=diff;
+			} else {
+				diff=Math.pow(K, 2);
+				result.innerHTML=diff;
+					}
+		}
+		// 5 минут
+	</script>
+</body>
+</html>
