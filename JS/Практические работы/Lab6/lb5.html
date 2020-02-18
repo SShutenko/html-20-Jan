@@ -1,4 +1,3 @@
-<<<<<<< .mine
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +8,13 @@
 	<div id="out"></div>
 	<p>V:<input type="" name="" id="inp"></p>
 	<button type="button" onclick="test1()">
-		TEST
+		TEST 1
 	</button>
 	<button type="button" onclick="test2()">
-		TEST
+		TEST 2
 	</button>
 	<button type="button" onclick="test3()">
-		TEST
+		TEST 3
 	</button>
 	<script>
 		let e=document.getElementById("inp");
@@ -64,70 +63,3 @@
 	</script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Задача 1</title>
-</head>
-<body>
-	<div id="out"></div>
-	<p>x: <input type="text" id="inp"></p>
-	<p>y: <input type="text" id="inp2"></p>
-	<p>z: <input type="text" id="inp3"></p>
-	<button type="button" onclick="test()">
-		TEST
-	</button>
-	<script>
-		let e=document.getElementById("inp");
-		let e2=document.getElementById("inp2");
-		let e3=document.getElementById("inp3");
-		let result=document.getElementById("out");
-		function test() {
-			let X=parseFloat(e.value);
-			let Y=parseFloat(e2.value);
-			let Z=parseFloat(e3.value);
-			let xyz;// хранитт данные X Y Z после логических преобразований
-			if (X>0) {
-				let diff=X**2;
-				xyz=diff;
-				result.innerHTML=diff;
-			} else {
-				xyz=X;
-				result.innerHTML=X;
-					}
-			if (Y>0) {
-				let diff=Y**2;
-				xyz+=" ;"+diff;
-				result.innerHTML=diff;
-			} else {
-				xyz+=" ;"+Y;
-				result.innerHTML=Y;
-					}
-			if (Z>0) {
-				let diff=Z**2;
-				xyz+=" ;"+diff;
-				result.innerHTML=diff;
-			} else {
-				xyz+=" ;"+Z;
-				result.innerHTML=Z;
-					}
-			result.innerHTML=xyz;
-		}
-		// 5 минут
-	</script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> .theirs
