@@ -5,26 +5,19 @@
 	<title>Задача 14</title>
 	</head>
 <body>
-	<p>a: <input type="text" id="a"></p>
-	<p>b: <input type="text" id="b"></p>
-	<p>c: <input type="text" id="c"></p>
+	<p>aInitial : <input type="text" id="aInitial"></p>
 	<button type="button" onclick="test()">
 			TEST
 	</button>
-	<div id="out">0</div>
+	<div id="out"></div>
 	<script>
-	let a=document.getElementById("a");
-	let b=document.getElementById("b");
-	let c=document.getElementById("c");
+	let a=document.getElementById("aInitial");
 	let out=document.getElementById("out");
 	function test() {
-		let val1=a.value;
-		let val2=b.value;
-		let val3=c.value;
-		out.innerHTML="Квадратное уравнение "+val1+"*x*x + "+val2+"*x + "+val3+" = 0."+"<br>"+"Его дискриминант вычисляется по формуле: d = "+val2+"*"+val2+" - 4*"+val1+"*"+val3
+		let aInitial=a.value;
+		let aRemainder=aInitial%360;
+		out.innerHTML=aRemainder;
 	}
 </script>
 </body>
 </html>
-
-

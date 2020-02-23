@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 6</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>t<sub>C</sub> : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let out=document.getElementById("out");
+		function test() {
+			let tC=parseFloat(e.value);
+			let temp="";
+			let state="";
+			let Q="";
+			let m=17;
+			let tK=tC+273.15;
+			let c=4.2*Math.pow(10, 3);
+			let r=2.26*Math.pow(10, 6);
+			let lambda=3.3*Math.pow(10, 5);
+			if (tC>0 && tC<100) {
+				state="жидкость";
+				Q=m*(tK*c+r);
+				out.innerHTML=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
+			} else if (tC==0) {
+				state="кристалл";
+				Q=m*tK*c;
+				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`+"<br>";
+				state="жидкость";
+				Q=m*(tK*c+r);
+				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
+				out.innerHTML=temp;
+			} else if (tC==100) {
+				state="жидкость";
+				Q=m*(tK*c+r);
+				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`+"<br>";
+				state="газ";
+				Q=m*(tK*c+r+lambda);
+				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
+				out.innerHTML=temp;
+			} else if (tC<0 && tC>-273.15) {
+				state="кристалл";
+				Q=m*tK*c;
+				out.innerHTML=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
+			} else if (tC<-273.15) {
+				out.innerHTML="Некорректная температура";
+			}else {
+				state="газ";
+				Q=m*(tK*c+r+lambda);
+				out.innerHTML=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
+			}
+			}
+	</script>
+</body>
+</html>

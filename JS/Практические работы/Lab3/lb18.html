@@ -5,20 +5,35 @@
 	<title>Задача 18</title>
 	</head>
 <body>
-	<div id="out">0</div>
+	<p>mass : <input type="text" id="mass"></p>
+	<p>velocity : <input type="text" id="velocity"></p>
+	<p>height : <input type="text" id="height"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
 	<script>
-		var a, b, c, d;
-		c = "успех";
-		a = "тоже провал";
-		b = "провал";
-		d = b;
-		b = d;
-		a = d;
-		b = c;
-		d = c;
-		a = b;
-		out.innerHTML = a;
-		//4 минуты
+	let a=document.getElementById("mass");
+	let a1=document.getElementById("velocity");
+	let a2=document.getElementById("height");
+	let out=document.getElementById("out");
+	function test() {
+		let mass=parseFloat(a.value);
+		let velocity=parseFloat(a1.value);
+		let height=parseFloat(a2.value);
+		if (mass<0) {
+			out.innerHTML="Значение mass должно быть положительным";
+		} else if (velocity<0) {
+			out.innerHTML="Значение velocity должно быть положительным";
+		} else if (height<0) {
+			out.innerHTML="Значение height должно быть неотрицательным";
+		} else {
+			let g=9.8067;
+			let kineticEnergy=(Math.pow(velocity, 2)*mass)/2;
+			let potentialEnergy=mass*height*g;
+			out.innerHTML="Кинетическая энергия составляет: "+kineticEnergy.toFixed(4)+" Дж"+"<br>"+"Потенциальная энергия составляет: "+potentialEnergy.toFixed(4)+" Дж";
+		}
+	}
 </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 10</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			if (A<B) {
+				out.innerHTML="Второе";
+			} else if (A>B) {
+				out.innerHTML="Первое";
+			} else {
+				out.innerHTML="Числа равны";
+			}
+			}
+	</script>
+</body>
+</html>

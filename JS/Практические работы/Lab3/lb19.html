@@ -5,11 +5,33 @@
 	<title>Задача 19</title>
 	</head>
 <body>
-	<div id="out">0</div>
+	<p>volume<sub>1</sub> : <input type="text" id="volume1"></p>
+	<p>temperature<sub>1</sub> : <input type="text" id="temperature1"></p>
+	<p>volume<sub>2</sub> : <input type="text" id="volume2"></p>
+	<p>temperature<sub>2</sub> : <input type="text" id="temperature2"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
 	<script>
-		let undersong="Йо-хо-хо, и бутылка рому!"
-	out.innerHTML="Задача 1640"+"<br>"+"Пятнадцать человек на сундук мертвеца."+"<br>"+undersong+"<br>"+"Пей, и дьявол тебя доведет до конца."+"<br>"+undersong
-		// 5 минут
+	let a=document.getElementById("volume1");
+	let a1=document.getElementById("temperature1");
+	let a2=document.getElementById("volume2");
+	let a3=document.getElementById("temperature2");
+	let out=document.getElementById("out");
+	function test() {
+		let volume1=parseFloat(a.value);
+		let temperature1=parseFloat(a1.value);
+		let volume2=parseFloat(a2.value);
+		let temperature2=parseFloat(a3.value);
+		if (volume1<0 || volume2<0) {
+			out.innerHTML="Объем должен быть неотрицательным";
+		} else {
+			let volume=volume1+volume2;
+			let temperature=(temperature1*volume1+temperature2*volume2)/volume;
+			out.innerHTML="Объем смеси: "+volume+" л"+"<br>"+"Температура смеси: "+temperature.toFixed(4)+" ℃";
+		}
+	}
 </script>
 </body>
 </html>

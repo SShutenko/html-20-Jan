@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 18</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X<sub>T</sub> : <input type="text" id="inp"></p>
+	<p>Y<sub>T</sub> : <input type="text" id="inp2"></p>
+	<p>X<sub>n1</sub> : <input type="text" id="inp3"></p>
+	<p>Y<sub>n1</sub> : <input type="text" id="inp4"></p>
+	<p>X<sub>n2</sub> : <input type="text" id="inp5"></p>
+	<p>Y<sub>n2</sub> : <input type="text" id="inp6"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let e4=document.getElementById("inp4");
+		let e5=document.getElementById("inp5");
+		let e6=document.getElementById("inp6");
+		let out=document.getElementById("out");
+		function test() {
+			let Xt=parseFloat(e.value);
+			let Yt=parseFloat(e2.value);
+			let Xn1=parseFloat(e3.value);
+			let Yn1=parseFloat(e4.value);
+			let Xn2=parseFloat(e5.value);
+			let Yn2=parseFloat(e6.value);
+			let globalX=(Xt-Xn1)/(Xn2-Xn1);
+			let globalY=(Yt-Yn1)/(Yn2-Yn1);
+			if (Xt<0 || Yt<0 || Xn1<0 || Yn1<0 || Xn2<0 || Yn2<0) {
+				out.innerHTML="Координаты должны быть неотрицательны";
+			} else if (globalX==globalY) {
+				out.innerHTML="Точка принадлежит прямой";
+			} else {
+				out.innerHTML="Точка не принадлежит прямой";
+			}
+			}
+	</script>
+</body>
+</html>

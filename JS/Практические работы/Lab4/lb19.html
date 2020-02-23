@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 19</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>t : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let out=document.getElementById("out");
+		function test() {
+			let t=parseFloat(e.value);
+			let proc=t%10;
+			if (t<0 || t>59) {
+				out.innerHTML="Значение t должно быть в интервале [0, 59]";
+			} else if (proc==0 || proc== 1 || proc==2 || proc==5 || proc==6 || proc==7) {
+				out.innerHTML="Зеленый";
+			} else {
+				out.innerHTML="Красный";
+			}
+		}
+	</script>
+</body>
+</html>

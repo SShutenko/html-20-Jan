@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 30</title>
+	</head>
+<body>
+	<p>initialVelocity : <input type="text" id="initialVelocity"></p>
+	<p>time : <input type="text" id="time"></p>
+	<p>acceleration : <input type="text" id="acceleration"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("initialVelocity");
+	let a1=document.getElementById("time");
+	let a2=document.getElementById("acceleration");
+	let out=document.getElementById("out");
+	function test() {
+		let initialVelocity=parseFloat(a.value);
+		let time=parseFloat(a1.value);
+		let acceleration=parseFloat(a2.value);
+		if (initialVelocity<0) {
+			out.innerHTML="Начальная скорость должна быть неотрицательна";
+		} else if (time<=0) {
+			out.innerHTML="Время должно быть положительным";
+		} else {
+			let distance=initialVelocity*time+(acceleration*time*time)/2
+			out.innerHTML=distance.toFixed(2);
+		}
+	}
+</script>
+</body>
+</html>

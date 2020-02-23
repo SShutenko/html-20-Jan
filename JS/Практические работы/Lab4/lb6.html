@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 6</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>roadKm: <input type="text" id="inp"></p>
+	<p>lengthFeet: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let out=document.getElementById("out");
+		function test() {
+			let roadKm=parseFloat(e.value)*1000;
+			let lengthFeet=parseFloat(e2.value)*0.305;
+			if (roadKm<=0) {
+				out.innerHTML="Расстояние между деревнями должно быть неотрицательно";
+			} else if (lengthFeet<=0) {
+				out.innerHTML="Длина кабеля должна быть неотрицательна";
+			} else if (roadKm>lengthFeet) {
+				out.innerHTML="Кабеля не хватит. Длина кабеля меньше расстояния.";
+			} else {
+				out.innerHTML="Кабеля хватит. Расстояние меньше длины кабеля.";
+			}
+			}
+	</script>
+</body>
+</html>

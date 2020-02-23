@@ -5,16 +5,25 @@
 	<title>Задача 15</title>
 	</head>
 <body>
-	<div id="out">0</div>
+	<p>lengthSeconds : <input type="text" id="lengthSeconds"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
 	<script>
-		var a, b, c;
-		b = "провал";
-		c = "успех";
-		b = c;
-		c = b;
-		a = b;
-		out.innerHTML = a;
-		//3 минуты
+	let a=document.getElementById("lengthSeconds");
+	let out=document.getElementById("out");
+	function test() {
+		let lengthSeconds=a.value;
+		if (lengthSeconds<0) {
+			out.innerHTML="Количество времени должно быть неотрицательным";
+		} else {
+			let hour=Math.floor(lengthSeconds/3600);
+			let minute=Math.floor((lengthSeconds-hour*3600)/60);
+			let second=lengthSeconds%60;
+			out.innerHTML=hour+" часов "+minute+" минут "+second+" секунд";
+		}
+	}
 </script>
 </body>
 </html>

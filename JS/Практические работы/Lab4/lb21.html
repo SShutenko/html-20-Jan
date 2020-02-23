@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 21</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
+	<p>C : <input type="text" id="inp3"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let C=parseFloat(e3.value);
+			let temp="";
+			if (A>0) {
+				temp+=A+"*x^2";
+				out.innerHTML=temp;
+			} else if (A==0) {
+				out.innerHTML=temp;
+			} else {
+				temp+=A+"*x^2";
+				out.innerHTML=temp;
+			}
+			if (B>0) {
+				temp+="+"+B+"*x";
+				out.innerHTML=temp;
+			} else if (B==0) {
+				out.innerHTML=temp;
+			} else {
+				temp+=B+"*x";
+				out.innerHTML=temp;
+			}
+			if (C>0) {
+				temp+="+"+C;
+				out.innerHTML=temp;
+			} else if (C==0) {
+				out.innerHTML=temp;
+			} else {
+				temp+=C;
+				out.innerHTML=temp;
+			}
+			out.innerHTML=temp+"=0";
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 15</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let X=e.value;
+			let temp="";
+			if (X=="a") {
+				temp+="a";
+			} else if (X=="b") {
+				temp+="ab";
+			} else if (X=="c") {
+				temp+="abc";
+			} else if (X=="d") {
+				temp+="abcd";
+			} else if (X=="e") {
+				temp+="abcde";
+			} else if (X=="f") {
+				temp+="abcdef";
+			} else if (X=="g") {
+				temp+="abcdefg";
+			} else {
+				temp+="abcdefgh";
+			}
+		result.innerHTML=temp;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 29</title>
+	</head>
+<body>
+	<p>x<sub>1</sub> : <input type="text" id="x1"></p>
+	<p>x<sub>2</sub> : <input type="text" id="x2"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("x1");
+	let a1=document.getElementById("x2");
+	let out=document.getElementById("out");
+	function test() {
+		let x1=parseFloat(a.value);
+		let x2=parseFloat(a1.value);
+		let result=Math.sqrt(x2*x2+x1*x1)
+			out.innerHTML=result.toFixed(4);
+	}
+</script>
+</body>
+</html>

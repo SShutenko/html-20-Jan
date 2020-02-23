@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 31</title>
+	</head>
+<body>
+	<p>R1 : <input type="text" id="r1"></p>
+	<p>R2 : <input type="text" id="r2"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("r1");
+	let a1=document.getElementById("r2");
+	let out=document.getElementById("out");
+	function test() {
+		let r1=parseFloat(a.value);
+		let r2=parseFloat(a1.value);
+		if (r1===0) {
+			out.innerHTML="Значение r1 должно быть не равно нулю";
+		} else if (r2===0) {
+			out.innerHTML="Значение r2 должно быть не равно нулю";
+		} else {
+			let result=1/r1+1/r2;
+			out.innerHTML=result.toFixed(4);
+		}
+	}
+</script>
+</body>
+</html>

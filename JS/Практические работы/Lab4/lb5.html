@@ -2,32 +2,48 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 1</title>
+	<title>Задача 5</title>
 </head>
 <body>
 	<div id="out"></div>
-	<p>P: <input type="text" id="inp"></p>
-	<p>Q: <input type="text" id="inp2"></p>
+	<p>X: <input type="text" id="inp"></p>
+	<p>Y: <input type="text" id="inp2"></p>
+	<p>Z: <input type="text" id="inp3"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
-		let result=document.getElementById("out");
+		let e3=document.getElementById("inp3");
+		let out=document.getElementById("out");
 		function test() {
-			let P=parseFloat(e.value);
-			let Q=parseFloat(e2.value);
-			let diff;
-			if (P>=Q) {
-				diff=P-Q;
-				result.innerHTML="Максимальное "+P+", минимальное "+Q+". Разница "+diff;
+			let x=parseFloat(e.value);
+			let y=parseFloat(e2.value);
+			let z=parseFloat(e3.value);
+			let result;
+			if (x>=0) {
+				result=x*x+"; ";
+				out.innerHTML=result;
 			} else {
-				diff=Q-P;
-				result.innerHTML="Максимальное "+Q+", минимальное "+P+". Разница "+diff;
-					}
-		}
-		// 5 минут
+				result=x+"; ";
+				out.innerHTML=result;
+			}
+			if (y>=0) {
+				result+=y*y+"; ";
+				out.innerHTML=result;
+			} else {
+				result+=y+"; ";
+				out.innerHTML=result;
+			}
+			if (z>=0) {
+				result+=z*z+";";
+				out.innerHTML=result;
+			} else {
+				result+=z+";";
+				out.innerHTML=result;
+			}
+			}
 	</script>
 </body>
 </html>

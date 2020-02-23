@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 23</title>
+	</head>
+<body>
+	<p>mass<sub>1</sub> : <input type="text" id="mass1"></p>
+	<p>mass<sub>2</sub> : <input type="text" id="mass2"></p>
+	<p>distance : <input type="text" id="distance"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("mass1");
+	let a1=document.getElementById("mass2");
+	let a2=document.getElementById("distance");
+	let out=document.getElementById("out");
+	function test() {
+		let mass1=parseFloat(a.value);
+		let mass2=parseFloat(a1.value);
+		let distance=parseFloat(a2.value);
+		if (mass1<=0 || mass2<=0) {
+			out.innerHTML="Масса должна быть положительной";
+		} else if (distance<=0) {
+			out.innerHTML="Дистанция должна быть неотрицательной";
+		} else {
+			const g=9.8067;
+			let force=(g*mass1*mass2)/Math.pow(distance, 2)
+			out.innerHTML=force.toFixed(4);
+		}
+	}
+</script>
+</body>
+</html>

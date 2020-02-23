@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 26</title>
+	</head>
+<body>
+	<p>xDeg : <input type="text" id="xDeg"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("xDeg");
+	let out=document.getElementById("out");
+	function test() {
+		let xDeg=parseFloat(a.value);
+		let xRad=(Math.PI/180)*xDeg;
+		let sin2=(1-Math.cos(2*xRad))/2;
+		let result=Math.sqrt(1-sin2);
+		out.innerHTML=result.toFixed(4);
+	}
+</script>
+</body>
+</html>

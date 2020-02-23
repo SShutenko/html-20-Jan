@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 17</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
+	<p>C : <input type="text" id="inp3"></p>
+	<p>D : <input type="text" id="inp4"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let e4=document.getElementById("inp4");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let C=parseFloat(e3.value);
+			let D=parseFloat(e4.value);
+			if (A<=0) {
+				out.innerHTML="Значение A должно быть неотрицательным";
+			} else if (B<=0) {
+				out.innerHTML="Значение B должно быть неотрицательным";
+			} else if (C<=0) {
+				out.innerHTML="Значение C должно быть неотрицательным";
+			} else if (D<=0) {
+				out.innerHTML="Значение D должно быть неотрицательным";
+			} else if (A<=C && B<=D) {
+				out.innerHTML="Размещение возможно";
+			} else if (A<=D && B<=C) {
+				out.innerHTML="Размещение возможно";
+			} else {
+				out.innerHTML="Размещение не возможно";
+			}
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 28</title>
+	</head>
+<body>
+	<p>x : <input type="text" id="x"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("x");
+	let out=document.getElementById("out");
+	function test() {
+		let x=parseFloat(a.value);
+		let sqrt1=x+5;
+		let sqrt2=x-5;
+		if (x<=0 || x-5<0) {
+			out.innerHTML="Подкоренное выражение должно быть неотрицательным";
+		} else {
+			let result=(Math.sqrt(sqrt1)+Math.sqrt(sqrt2))/(2*Math.sqrt(x));
+			out.innerHTML=result.toFixed(6);
+		}
+	}
+</script>
+</body>
+</html>

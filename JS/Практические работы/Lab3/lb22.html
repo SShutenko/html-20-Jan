@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 22</title>
+	</head>
+<body>
+	<p>h (метры) : <input type="text" id="h"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let a=document.getElementById("h");
+	let out=document.getElementById("out");
+	function test() {
+		let h=parseFloat(a.value);
+		if (h<0) {
+			out.innerHTML="Высота должна быть положительной";
+		} else {
+			const R=6350;
+			let d=Math.sqrt(Math.pow(R+h, 2)-Math.pow(R, 2))
+			out.innerHTML=d.toFixed(4);
+		}
+	}
+</script>
+</body>
+</html>

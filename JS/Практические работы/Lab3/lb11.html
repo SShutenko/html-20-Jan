@@ -5,22 +5,32 @@
 	<title>Задача 11</title>
 	</head>
 <body>
-	<p>x:</p>
-	<input type="text" id="x">
-	<p>y:</p>
-	<input type="text" id="y">
+	<p>a<sub>x</sub>: <input type="text" id="in_a1"></p>
+	<p>a<sub>y</sub>: <input type="text" id="in_a2"></p>
+	<p>b<sub>x</sub>: <input type="text" id="in_b1"></p>
+	<p>b<sub>y</sub>: <input type="text" id="in_b2"></p>
 	<button type="button" onclick="test()">
 			TEST
 	</button>
-	<div id="out">0</div>
+	<div id="out"></div>
 	<script>
-	let x=document.getElementById("x");
-	let y=document.getElementById("y");
+	let e1=document.getElementById("in_a1");
+	let e2=document.getElementById("in_a2");
+	let e3=document.getElementById("in_b1");
+	let e4=document.getElementById("in_b2");
 	let out=document.getElementById("out");
 	function test() {
-		let x1=x.value;
-		let y1=y.value;
-		out.innerHTML="INSERT INTO points (x, y) VALUES (\'"+x1+"\', \'"+y1+"\');"
+		let ax=e1.value;
+		let ay=e2.value;
+		let bx=e3.value;
+		let by=e4.value;
+		let a_mod=Math.sqrt(Math.pow(ax, 2)+Math.pow(ay, 2));
+		let b_mod=Math.sqrt(Math.pow(bx, 2)+Math.pow(by, 2));
+		let ab_mod=a_mod*b_mod;
+		let product=ax*bx+ay*by;
+		let angle=Math.acos(product/ab_mod);
+		let aDeg=(180/Math.PI)*angle;
+		out.innerHTML="Модуль вектора a = "+a_mod.toFixed(4)+"<br>"+"Модуль вектора b = "+b_mod.toFixed(4)+"<br>"+"Скалярное произведение векторов = "+product.toFixed(4)+"<br>"+"Угол между векторами составляет "+aDeg.toFixed(4)+" градусов"
 	}
 </script>
 </body>

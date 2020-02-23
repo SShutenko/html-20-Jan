@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 16</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let proc=A%10;
+			let proc1=A.toString().slice(-1);
+			if (A>100 || A<-10) {
+				out.innerHTML="Значение A должно быть в интервале [-10, 100]";
+			} else if (A==40) {
+				out.innerHTML=A+"\'ой";
+			} else if (A!=13 && proc1==3) {
+				out.innerHTML=A+"\'ий";
+			} else if (A==12|| A==13 || A==16 || A==17 || A==18 || proc==1 || proc==4 || proc==5|| proc==9 || proc==0) {
+				out.innerHTML=A+"\'ый";
+			} else {
+				out.innerHTML=A+"\'ой";
+			}
+			}
+	</script>
+</body>
+</html>

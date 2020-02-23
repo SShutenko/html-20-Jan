@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 12</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
+	<p>C : <input type="text" id="inp3"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let C=parseFloat(e3.value);
+			let discriminant=B*B-4*A*C;
+			if (A==0) {
+				out.innerHTML="Данное уравнение не является квадратным";
+			} else if (discriminant<0) {
+				out.innerHTML="Вещественных корней уравнения нет";
+			} else if (discriminant>0) {
+				out.innerHTML="У уравнения два вещественных корня";
+			} else {
+				out.innerHTML="Уравнение имеет один корень";
+			}
+			}
+	</script>
+</body>
+</html>

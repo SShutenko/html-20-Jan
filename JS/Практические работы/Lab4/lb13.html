@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 13</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>shipKmH : <input type="text" id="inp"></p>
+	<p>cometMS : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let out=document.getElementById("out");
+		function test() {
+			let shipKmH=parseFloat(e.value);
+			let cometMS=parseFloat(e2.value);
+			let cometKmH=cometMS*3.6;
+			if (shipKmH<0) {
+				out.innerHTML="Скорость корабля должна быть неотрицательна";
+			} else if (cometMS<0) {
+				out.innerHTML="Скорость кометы должна быть неотрицательна";
+			} else if (shipKmH>cometKmH) {
+				out.innerHTML="Корабль догонит комету."+"<br>"+"Скорость кометы "+cometMS.toFixed(2)+" м/с меньше скорости корабля "+shipKmH.toFixed(2)+" км/ч";
+			} else if (shipKmH<cometKmH) {
+				out.innerHTML="Комета улетит от корабля."+"<br>"+"Скорость кометы "+cometMS.toFixed(2)+" м/с больше скорости корабля "+shipKmH.toFixed(2)+" км/ч";
+			} else {
+				out.innerHTML="Корабль и комета двигаются с одинаковой скоростью";
+			}
+			}
+	</script>
+</body>
+</html>

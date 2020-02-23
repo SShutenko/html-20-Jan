@@ -5,18 +5,32 @@
 	<title>Задача 16</title>
 	</head>
 <body>
-	<div id="out">0</div>
+	<p>velocity1 : <input type="text" id="velocity1"></p>
+	<p>velocity2 : <input type="text" id="velocity2"></p>
+	<p>distance : <input type="text" id="distance"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
 	<script>
-		var a, b, c;
-		c = "успех";
-		b = "тоже провал";
-		a = "провал";
-		b = a;
-		b = c;
-		c = b;
-		a = b;
-		out.innerHTML = a;
-		// 3 минуты
+	let a=document.getElementById("velocity1");
+	let a1=document.getElementById("velocity2");
+	let a2=document.getElementById("distance");
+	let out=document.getElementById("out");
+	function test() {
+		let velocity1=parseFloat(a.value);
+		let velocity2=parseFloat(a1.value);
+		let distance=parseFloat(a2.value);
+		if (velocity1<0 || velocity2<0) {
+			out.innerHTML="Скорость должна быть неотрицательна!";
+		} else if (distance<0) {
+			out.innerHTML="Расстояние должно быть неотрицательно";
+		} else {
+			let velocity_total=velocity1+velocity2;
+			let time=distance/velocity_total;
+			out.innerHTML=time.toFixed(4);
+		}
+	}
 </script>
 </body>
 </html>

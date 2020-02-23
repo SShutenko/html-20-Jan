@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 11</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
+	<p>C : <input type="text" id="inp3"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let C=parseFloat(e3.value);
+			if (C<=0) {
+				out.innerHTML="Значение C должно быть неотрицательным";
+			} else if (A<=0) {
+				out.innerHTML="Значение A должно быть неотрицательным";
+			} else if (B<=0) {
+				out.innerHTML="Значение B должно быть неотрицательным";
+			} else if (A==B || A==C || C==B) {
+				out.innerHTML="Треугольник является равнобедренным.";
+			} else {
+				out.innerHTML="Треугольник не является равнобедренным.";
+			}
+			}
+	</script>
+</body>
+</html>

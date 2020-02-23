@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 8</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>radius: <input type="text" id="inp"></p>
+	<p>edge: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let out=document.getElementById("out");
+		function test() {
+			let radius=parseFloat(e.value);
+			let edge=parseFloat(e2.value);
+			let squareArea=edge*edge;
+			let circleArea=Math.PI*Math.pow(radius, 2);
+			if (radius<=0) {
+				out.innerHTML="Радиус должен быть положительным";
+			} else if (edge<=0) {
+				out.innerHTML="Сторона квадрата должна быть положительна";
+			} else if (squareArea>circleArea) {
+				out.innerHTML="Площадь квадрата "+squareArea.toFixed(4)+" больше площади круга "+circleAre.toFixed(4);
+			} else if (squareArea<circleArea) {
+				out.innerHTML="Площадь круга "+circleArea.toFixed(4)+" больше площади квадрата "+squareArea.toFixed(4);
+			} else {
+				out.innerHTML="Площадь круга "+circleArea.toFixed(4)+" равна площади квадрата "+squareArea.toFixed(4);
+			}
+		}
+	</script>
+</body>
+</html>

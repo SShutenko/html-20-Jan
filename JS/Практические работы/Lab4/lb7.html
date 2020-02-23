@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 7</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let out=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let units=A%10;
+			let hundreds=A.toString().slice(1,-2);
+			let trued="Количество сотен: "+hundreds+"<br>"+"Количество единиц: "+units+"<br>";
+			if (A<1000 || A>9999) {
+				out.innerHTML="Значение A должно быть в интервале от 1000 до 9999 включительно"
+			} else if (units!=hundreds) {
+				out.innerHTML=trued+"Количество сотен не равно количеству единиц."
+			} else if (units==hundreds){
+				out.innerHTML=trued+"Количество сотен равно количеству единиц."
+			}
+		}
+	</script>
+</body>
+</html>

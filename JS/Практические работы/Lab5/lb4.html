@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 4</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Красный интервал [-11;-3]</p>
+	<p>Зеленый интервал [5;19]</p>
+	<p>X : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let out=document.getElementById("out");
+		function test() {
+			let X=e.value;
+			if (X>=-11 && X<=-3) {
+				out.innerHTML="Красный"
+			} else if (X>=5 && X<=19) {
+				out.innerHTML="Зеленый"
+			} else {
+				out.innerHTML="X не попадает ни в зеленый, ни в красный интервал";
+			}
+			}
+	</script>
+</body>
+</html>

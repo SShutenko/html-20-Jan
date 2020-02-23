@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 24</title>
+	</head>
+<body>
+	<p>a : <input type="text" id="a"></p>
+	<p>b : <input type="text" id="b"></p>
+	<p>cInDeg : <input type="text" id="cInDeg"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
+	<script>
+	let e=document.getElementById("a");
+	let e1=document.getElementById("b");
+	let e2=document.getElementById("cInDeg");
+	let out=document.getElementById("out");
+	function test() {
+		let a=parseFloat(e.value);
+		let b=parseFloat(e1.value);
+		let cInDeg=parseFloat(e2.value);
+		let cInRad=Math.PI*cInDeg/180;
+		let result=Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2)-2*a*b*Math.cos(cInRad))
+		out.innerHTML=result.toFixed(4);
+	}
+</script>
+</body>
+</html>

@@ -5,29 +5,32 @@
 	<title>Задача 13</title>
 	</head>
 <body>
-	<p>user: <input type="text" id="user"></p>
-	<p>pass: <input type="text" id="pass"></p>
-	<p>host: <input type="text" id="host"></p>
-	<p>part: <input type="text" id="part"></p>
-	<p>db: <input type="text" id="db"></p>
+	<p>totalM: <input type="text" id="total"></p>
+	<p>partCM: <input type="text" id="part"></p>
 	<button type="button" onclick="test()">
 			TEST
 	</button>
 	<div id="out">0</div>
 	<script>
-	let user=document.getElementById("user");
-	let pass=document.getElementById("pass");
-	let host=document.getElementById("host");
-	let part=document.getElementById("part");
-	let db=document.getElementById("db");
+	let e=document.getElementById("total");
+	let e1=document.getElementById("part");
 	let out=document.getElementById("out");
 	function test() {
-		let x1=user.value;
-		let x2=pass.value;
-		let x3=host.value;
-		let x4=part.value;
-		let x5=db.value;
-		out.innerHTML="User ID="+x1+"; Password="+x2+"; "+"<br>"+"Host="+x3+"; Port="+x4+"; Database="+x5+";"
+		let total=100*e.value;
+		let part=e1.value;
+		let amount;
+		let remainder;
+		if (part>total) {
+			out.innerHTML="Материала не хватит даже на одно изделие!"
+		} else if (total<=0) {
+			out.innerHTML="Длина рулона должна быть положительна"
+		} else if (part<=0) {
+			out.innerHTML="Расход материала должен быть положительным"
+		} else {
+			amount=Math.floor(total/part);
+			remainder=total%part;
+			out.innerHTML=amount+" шт и "+remainder+" см"
+		}
 	}
 </script>
 </body>

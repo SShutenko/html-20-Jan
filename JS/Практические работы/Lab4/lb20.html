@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 20</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>W : <input type="text" id="inp"></p>
+	<p>H : <input type="text" id="inp2"></p>
+	<p>C : <input type="text" id="inp3"></p>
+	<p>D : <input type="text" id="inp4"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let e4=document.getElementById("inp4");
+		let out=document.getElementById("out");
+		function test() {
+			let W=parseFloat(e.value);
+			let H=parseFloat(e2.value);
+			let C=parseFloat(e3.value);
+			let D=parseFloat(e4.value);
+			let horizontal=Math.floor(W/C)*Math.floor(H/D);
+			let vertical=Math.floor(W/D)*Math.floor(H/C);
+			if (W<=0) {
+				out.innerHTML="Значение W должно быть положительным";
+			} else if (H<=0) {
+				out.innerHTML="Значение H должно быть положительным";
+			} else if (C<=0) {
+				out.innerHTML="Значение C должно быть положительным";
+			} else if (D<=0) {
+				out.innerHTML="Значение D должно быть положительным";
+			} else if (horizontal<vertical) {
+				out.innerHTML=`${vertical} при C вдоль H`;
+			} else {
+				out.innerHTML=`${horizontal} при C вдоль W`;
+			}
+			}
+	</script>
+</body>
+</html>

@@ -5,20 +5,28 @@
 	<title>Задача 17</title>
 	</head>
 <body>
-	<div id="out">0</div>
+	<p>yarnDiameterCm : <input type="text" id="yarnDiameterCm"></p>
+	<p>wireCoils : <input type="text" id="wireCoils"></p>
+	<button type="button" onclick="test()">
+			TEST
+	</button>
+	<div id="out"></div>
 	<script>
-		//String a, b, c, d;
-		var a, b, c, d;
-		c = "успех";
-		a = "тоже провал";
-		b = "провал";
-		d = b;
-		d = c;
-		b = d;
-		c = b;
-		a = b;
-		out.innerHTML = a;
-		// 2 минуты если var, не решаемо нет синтаксическая ошибка в 10й строке если String
+	let a=document.getElementById("yarnDiameterCm");
+	let a1=document.getElementById("wireCoils");
+	let out=document.getElementById("out");
+	function test() {
+		let yarnDiameterCm=parseFloat(a.value);
+		let wireCoils=parseFloat(a1.value);
+		if (yarnDiameterCm<=0) {
+			out.innerHTML="Длина проволоки должна быть неотрицательна";
+		} else if (wireCoils<=0) {
+			out.innerHTML="Количество витков должно быть неотрицательно";
+		} else {
+			let result=Math.floor(Math.PI*yarnDiameterCm*wireCoils);
+			out.innerHTML=result+" см";
+		}
+	}
 </script>
 </body>
 </html>
