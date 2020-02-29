@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 22</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let X=e.value;
+			let temp="";
+			if (X>=30 && X<=40) {
+				for (i=30; i<=40; i++) {
+					temp+=i+"-"+"<br>";
+					if (i%X==0) {
+						temp+="+";
+					}
+				}
+				result.innerHTML=temp;
+			}
+				if (X<30 || X>40) {
+					for (i=30; i<=40; i++) {
+					temp+=i+"-"+"<br>";
+				}
+				result.innerHTML=temp;
+				}
+			}
+	</script>
+</body>
+</html>

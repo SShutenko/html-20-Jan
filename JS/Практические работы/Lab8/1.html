@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 1</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>Данные : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST 1
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let text=e2.value;
+			let arr=text.split(" ");
+			if (A>=0 && A<=arr.length) {
+				result.innerHTML=arr[A];
+			} else if (text=="") {
+				result.innerHTML="Исходная строка пуста";
+			} else {
+				result.innerHTML="Число A должно быть в интервале [0, размер массива)";
+			}
+		}
+	</script>
+</body>
+</html>

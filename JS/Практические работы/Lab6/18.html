@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 18</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>X: <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST 1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let X=e.value;
+			let temp="";
+			let i=10;
+			while (i<21) {
+				temp+="<br>"+i;
+				if (i==X) {
+					temp+="+";
+				}
+				i++;
+				result.innerHTML=temp;
+			}
+		}
+		function test2() {
+			let X=parseFloat(e.value);
+			let temp="";
+			for (i=10; i<21; i++) {
+				temp+="<br>"+i;
+				if (i==X) {
+					temp+="+";
+				}
+				result.innerHTML=temp;
+			}
+		}
+	</script>
+</body>
+</html>

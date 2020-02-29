@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 13</title>
+	<title>Задача 15</title>
 </head>
 <body>
 	<div id="out"></div>
@@ -21,29 +21,41 @@
 		function test() {
 			let A=parseFloat(e.value);
 			let B=parseFloat(e2.value);
-			if (B>=A) {
+			let temp="";
+			if (B==A) {
+				result.innerHTML="Границы равны <br>"+A;
+			} else if (B>A) {
 				let i=A;
-				let temp="";
 				while (i<=B) {
-				temp+=i+" ; ";
+				temp+=i+" ";
 				i++;
-			}
-				result.innerHTML=temp;
+				}
+				result.innerHTML="От A до B"+"<br>"+temp;
 			} else {
-				result.innerHTML="Значение A должно быть не больше значения B";
+				let i=B;
+				while (i<=A) {
+				temp+=i+" ";
+				i++;
+				}
+				result.innerHTML="От B до A"+"<br>"+temp;
 			}
 		}
 		function test2() {
 			let A=parseFloat(e.value);
 			let B=parseFloat(e2.value);
-			if (B>=A) {
-				let temp="";
+			let temp="";
+			if (B==A) {
+				result.innerHTML="Границы равны <br>"+A;
+			} else if (B>A) {
 				for (i=A; i<=B; i++) {
-				temp+=i+" ; ";
-			}
-				result.innerHTML=temp;
+				temp+=i+" ";
+				}
+				result.innerHTML="От A до B"+"<br>"+temp;
 			} else {
-				result.innerHTML="Значение A должно быть не больше значения B";
+				for (i=B; i<=A; i++) {
+				temp+=i+" ";
+				}
+				result.innerHTML="От B до A"+"<br>"+temp;
 			}
 		}
 	</script>

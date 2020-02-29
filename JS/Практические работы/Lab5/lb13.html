@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 13</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>mass : <input type="text" id="inp"></p>
+	<p>declaredValue : <input type="text" id="inp1"></p>
+	<p>distance : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e1=document.getElementById("inp1");
+		let e2=document.getElementById("inp2");
+		let out=document.getElementById("out");
+		function test() {
+			let mass=parseFloat(e.value);
+			let declaredValue=parseFloat(e1.value);
+			let distance=parseFloat(e2.value);
+			let cost="";
+			if (mass<=0) {
+				out.innerHTML="Масса должна быть положительна";
+			} else if (distance<=0) {
+				out.innerHTML="Расстояние должно быть неотрицательно";
+			} else if (declaredValue<0) {
+				out.innerHTML="Оценочная стоимость должна быть неотрицательна";
+			} else if (mass>0 && mass<=100) {
+				cost=40;
+			} else {
+				cost=40+(Math.ceil((mass-100)/20))*2.5;
+			}
+			if (declaredValue>0) {
+				cost+=Math.ceil(declaredValue)*0.03;
+			} else {
+				cost+=0;
+			}
+			if (distance>0 && distance<=600) {
+				cost+=Math.ceil(mass/500)*95;
+			} else if (distance>600 && distance<=2000) {
+				cost+=Math.ceil(mass/500)*105;
+			} else if (distance>2000 && distance<=5000) {
+				cost+=Math.ceil(mass/500)*120;
+			} else if (distance>5000 && distance<=8000) {
+				cost+=Math.ceil(mass/500)*135;
+			} else {
+				cost+=Math.ceil(mass/500)*150;
+			}
+			out.innerHTML=`Плата за посылку массой ${mass} грамм с оценочной стоимостью ${declaredValue.toFixed(2)} рублей, которую отправили на расстояние ${distance.toFixed(1)} км, составляет ${cost.toFixed(2)} рублей`
+			}
+	</script>
+</body>
+</html>

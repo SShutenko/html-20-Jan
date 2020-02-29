@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 13</title>
+	<title>Задача 1</title>
 </head>
 <body>
 	<div id="out"></div>
 	<p>A: <input type="text" id="inp"></p>
 	<p>B: <input type="text" id="inp2"></p>
 	<button type="button" onclick="test()">
-		TEST 1
-	</button>
-	<button type="button" onclick="test2()">
-		TEST 2
+		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
@@ -22,30 +19,18 @@
 			let A=parseFloat(e.value);
 			let B=parseFloat(e2.value);
 			if (B>=A) {
-				let i=A;
+				let i=B;
 				let temp="";
-				while (i<=B) {
-				temp+=i+" ; ";
-				i++;
+				while (i>=A) {
+				temp+=i+" ";
+				i--;
 			}
-				result.innerHTML=temp;
+				result.innerHTML="{"+temp+"}";
 			} else {
 				result.innerHTML="Значение A должно быть не больше значения B";
 			}
 		}
-		function test2() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
-			if (B>=A) {
-				let temp="";
-				for (i=A; i<=B; i++) {
-				temp+=i+" ; ";
-			}
-				result.innerHTML=temp;
-			} else {
-				result.innerHTML="Значение A должно быть не больше значения B";
-			}
-		}
+		// сделать через for
 	</script>
 </body>
 </html>

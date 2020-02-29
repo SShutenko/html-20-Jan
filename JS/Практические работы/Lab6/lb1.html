@@ -6,53 +6,90 @@
 </head>
 <body>
 	<div id="out"></div>
-	<p>A:<input type="" name="" id="inp"></p>
 	<button type="button" onclick="test()">
-		TEST
+		TEST 1
 	</button>
 	<button type="button" onclick="test1()">
-		TEST
+		TEST 2
+	</button>
+	<button type="button" onclick="test2()">
+		TEST 3
+	</button>
+	<button type="button" onclick="test3()">
+		TEST 4
+	</button>
+	<button type="button" onclick="test5()">
+		TEST 5
 	</button>
 	<script>
-		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
 		function test() {
-			let A=parseFloat(e.value);
-			let i=A;
-			let temp="";
-			while (i<A+10) {
-				temp+="<br>"+i+"<br>---";
-				i++;
-			}
+			let temp="Предысловие<br>";
+			temp+="Глава 1<br>";
+			temp+="Глава 2<br>";
+			temp+="Глава 3<br>";
+			temp+="Глава 4<br>";
+			temp+="Глава 5<br>";
+			temp+="Глава 6<br>";
+			temp+="Глава 7<br>";
+			temp+="Послесловие";
 			document.getElementById("out")
 			.innerHTML=temp;
 		}
 		function test1() {
-			let A=e.value;
-			let i=A;
-			let temp=i+"<br>";
+			let temp="Предысловие<br>";
+			let i=1;
+			temp+="Глава "+i+"<br>";
 			i++;
-			temp+="---<br>"+i+"<br>";
+			temp+="Глава "+i+"<br>";
 			i++;
-			temp+="---<br>"+i+"<br>";
+			temp+="Глава "+i+"<br>";
 			i++;
-			temp+="---<br>"+i+"<br>";
+			temp+="Глава "+i+"<br>";
 			i++;
-			temp+="---<br>"+i+"<br>";
+			temp+="Глава "+i+"<br>";
 			i++;
-			temp+="---<br>"+i+"<br>";
+			temp+="Глава "+i+"<br>";
 			i++;
-			temp+="---<br>"+i+"<br>";
-			i++;
-			temp+="---<br>"+i+"<br>";
-			i++;
-			temp+="---<br>"+i+"<br>";
-			i++;
-			temp+="---<br>"+i+"<br>";
-			i++;
+			temp+="Глава "+i+"<br>";
+			temp+="Послесловие";
 			document.getElementById("out")
 			.innerHTML=temp;
 		}
-		// решить задачу с помощью цикла for
+		function test2() {
+			let temp="Предысловие<br>";
+			let i=1;
+			temp+="Глава "+i+"<br>";
+			while (i<7) { //Условие продолжения работы
+				i++;
+				temp+="Глава "+i+"<br>";
+			}
+			temp+="Послесловие";
+			document.getElementById("out")
+			.innerHTML=temp;
+		}
+		function test3() {
+			let temp="Предысловие<br>";
+			let i=1;
+			while (i<=7) { //Условие продолжения работы
+				temp+="Глава "+i+"<br>";
+				i++;
+			}
+			temp+="Послесловие";
+			document.getElementById("out")
+			.innerHTML=temp;
+		}
+		function test5() {
+			let temp="Предысловие<br>";
+			for (i=1; i<=7; i++) {
+				temp+="Глава "+i+"<br>";
+				document.getElementById("out")
+				.innerHTML=temp;
+			}
+			temp+="Послесловие";
+			document.getElementById("out")
+			.innerHTML=temp;
+		}
 	</script>
 </body>
 </html>

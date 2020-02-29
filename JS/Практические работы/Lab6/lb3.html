@@ -10,21 +10,32 @@
 	<button type="button" onclick="test1()">
 		TEST
 	</button>
+	<button type="button" onclick="test2()">
+		TEST2
+	</button>
 	<button type="button" onclick="test3()">
-		TEST
+		TEST3
 	</button>
 	<script>
 		let e=document.getElementById("inp");
 		function test1() {
 			let X=e.value;
-			let i;
 			let temp=X;
-			temp+=X
-			temp+=X
-			temp+=X
-			temp+=X
-			temp+=X
-			temp+=X
+			temp+=X;
+			temp+=X;
+			temp+=X;
+			temp+=X;
+			temp+=X;
+			temp+=X;
+			document.getElementById("out")
+			.innerHTML="\'"+temp+"\'";
+		}
+		function test2() {
+			let X=e.value;
+			let temp="";
+			for (i=0; i<7; i++) {
+				temp+=X;
+			}
 			document.getElementById("out")
 			.innerHTML="\'"+temp+"\'";
 		}
@@ -32,14 +43,13 @@
 			let X=e.value;
 			let i=0;
 			let temp="";
-			while (i<7) { //Условие продолжения работы
+			while (i<7) {
 				temp+=X;
 				i++;
 			}
 			document.getElementById("out")
 			.innerHTML="\'"+temp+"\'";
 		}
-		// решить задачу с помощью цикла for решить 6ю лабораторную до 7й задачи включительно, остальные как попрет
 	</script>
 </body>
 </html>

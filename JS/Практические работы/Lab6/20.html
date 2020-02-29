@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 20</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>N : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let N=e.value;
+			let temp="";
+			for (i=0; i<N; i++) {
+				if (i%5===0) {
+					temp+="  ";
+				}
+				temp+="!";
+			}
+			result.innerHTML=temp;
+			if (N<0) {
+				result.innerHTML="Значение N должно быть неотрицательным";
+			}
+			if (N==0) {
+				result.innerHTML=" ";
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 2</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e.value;
+			let arr=text.split(";");
+			if (text=="" || text==" ") {
+				result.innerHTML="Исходная строка пуста";
+			} else {
+				result.innerHTML="Индекс: "+Math.floor(arr.length/2)+", элемент: "+arr[Math.floor(arr.length/2)];
+			}
+		}
+		// ошибка в приводимых данных 4 пр
+	</script>
+</body>
+</html>

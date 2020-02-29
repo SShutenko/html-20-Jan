@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 19</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>N : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST 1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let N=e.value;
+			let temp="";
+			let i=0;
+			while (i<=N) {
+				temp+=i+" - ";
+				if (i==N) {
+					temp+="+";
+				}
+				i++;
+				result.innerHTML=temp;
+			}
+		}
+		function test2() {
+			let N=parseFloat(e.value);
+			let temp="";
+			let temp1="";
+			for (i=0; i<=N; i++) {
+				temp+=i;
+				if (i<=N) {
+					for (n=0; n<=3; n++) {
+						temp1+=n;
+					}
+				}
+			}
+			result.innerHTML=temp+" - "+temp1+"<br>";
+		}
+	</script>
+</body>
+</html>

@@ -2,57 +2,58 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 6</title>
+	<title>Задача 12</title>
 </head>
 <body>
 	<div id="out"></div>
-	<p>t<sub>C</sub> : <input type="text" id="inp"></p>
+	<p>X<sub>1</sub> : <input type="text" id="inp"></p>
+	<p>Y<sub>1</sub> : <input type="text" id="inp1"></p>
+	<p>H<sub>1</sub> : <input type="text" id="inp2"></p>
+	<p>W<sub>1</sub> : <input type="text" id="inp3"></p>
+	<p>X<sub>2</sub> : <input type="text" id="inp4"></p>
+	<p>Y<sub>2</sub> : <input type="text" id="inp5"></p>
+	<p>H<sub>2</sub> : <input type="text" id="inp6"></p>
+	<p>W<sub>2</sub> : <input type="text" id="inp7"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e1=document.getElementById("inp1");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let e4=document.getElementById("inp4");
+		let e5=document.getElementById("inp5");
+		let e6=document.getElementById("inp6");
+		let e7=document.getElementById("inp7");
 		let out=document.getElementById("out");
 		function test() {
-			let tC=parseFloat(e.value);
-			let temp="";
-			let state="";
-			let Q="";
-			let m=17;
-			let tK=tC+273.15;
-			let c=4.2*Math.pow(10, 3);
-			let r=2.26*Math.pow(10, 6);
-			let lambda=3.3*Math.pow(10, 5);
-			if (tC>0 && tC<100) {
-				state="жидкость";
-				Q=m*(tK*c+r);
-				out.innerHTML=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
-			} else if (tC==0) {
-				state="кристалл";
-				Q=m*tK*c;
-				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`+"<br>";
-				state="жидкость";
-				Q=m*(tK*c+r);
-				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
-				out.innerHTML=temp;
-			} else if (tC==100) {
-				state="жидкость";
-				Q=m*(tK*c+r);
-				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`+"<br>";
-				state="газ";
-				Q=m*(tK*c+r+lambda);
-				temp+=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
-				out.innerHTML=temp;
-			} else if (tC<0 && tC>-273.15) {
-				state="кристалл";
-				Q=m*tK*c;
-				out.innerHTML=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
-			} else if (tC<-273.15) {
-				out.innerHTML="Некорректная температура";
-			}else {
-				state="газ";
-				Q=m*(tK*c+r+lambda);
-				out.innerHTML=`Агрегатное состояние: ${state}`+"<br>"+`Внутренняя энергия: ${Q.toFixed(2)} Дж`;
+			let X1=parseFloat(e.value);
+			let Y1=parseFloat(e1.value);
+			let H1=parseFloat(e2.value);
+			let W1=parseFloat(e3.value);
+			let X2=parseFloat(e4.value);
+			let Y2=parseFloat(e5.value);
+			let H2=parseFloat(e6.value);
+			let W2=parseFloat(e7.value);
+			if (X1<0 || X2<0) {
+				out.innerHTML=`Значение X должно быть больше, либо равно 0!`
+			} else if (Y1<0 || Y2<0) {
+				out.innerHTML=`Значение Y должно быть больше, либо равно 0!`
+			} else if (H1<0 || H2<0) {
+				out.innerHTML=`Значение H должно быть положительным!`
+			} else if (W1<0 || W2<0) {
+				out.innerHTML=`Значение W должно быть положительным!`
+			} else if (X1+W1>=X2 && Y1==Y2) {
+				out.innerHTML="не пересекаются";
+			} else if (X1+W1<=X2 && Y1==Y2) {
+				out.innerHTML="не пересекаются";
+			} else if (X1==X2 && Y1+H1<=Y2) {
+				out.innerHTML="не пересекаются";
+			} else if (X1==X2 && Y1+H1>=Y2) {
+				out.innerHTML="не пересекаются";
+			} else {
+				out.innerHTML="хохохо пересекаются";
 			}
 			}
 	</script>

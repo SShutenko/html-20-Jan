@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 1</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>R: <input type="text" id="inp"></p>
+	<p>T: <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST 1
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let R=parseFloat(e.value);
+			let T=parseFloat(e2.value);
+			let temp="";
+			if (R>=0 && T>=0) {
+				for (i=0; i<R; i++) {
+					temp+="#";
+				}
+				temp+="<br>";
+				for (n=0; n<T; n++) {
+					temp+="#";
+					}
+				result.innerHTML=temp;
+			} else {
+				result.innerHTML="Не отрицательно быть должно знаечение, однако!";
+			}
+			}
+	</script>
+</body>
+</html>
