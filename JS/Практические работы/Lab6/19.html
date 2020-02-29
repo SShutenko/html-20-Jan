@@ -32,16 +32,15 @@
 		function test2() {
 			let N=parseFloat(e.value);
 			let temp="";
-			let temp1="";
+			let n=0;
 			for (i=0; i<=N; i++) {
-				temp+=i;
-				if (i<=N) {
-					for (n=0; n<=3; n++) {
-						temp1+=n;
+				temp+=i+"- "+n+"<br>";
+				n++;
+				if (n==4) {
+					n=0;
 					}
 				}
-			}
-			result.innerHTML=temp+" - "+temp1+"<br>";
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

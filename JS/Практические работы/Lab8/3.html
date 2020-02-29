@@ -22,7 +22,7 @@
 				result.innerHTML=arr[0]+"<br>"+"Элемент на индексе 2 отсутствует"+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
 			} else if (arr[3]===undefined) {
 				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr[5]===undefined) {
+			} else if (arr.length<=5) {
 				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+"Элемент на индексе 5 отсутствует";
 			} else {
 				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+arr[5];

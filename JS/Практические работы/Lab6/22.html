@@ -16,21 +16,16 @@
 		function test() {
 			let X=e.value;
 			let temp="";
-			if (X>=30 && X<=40) {
 				for (i=30; i<=40; i++) {
-					temp+=i+"-"+"<br>";
+					temp+=i;
 					if (i%X==0) {
 						temp+="+";
+					} else {
+						temp+="-";
 					}
+					temp+="<br>";
 				}
 				result.innerHTML=temp;
-			}
-				if (X<30 || X>40) {
-					for (i=30; i<=40; i++) {
-					temp+=i+"-"+"<br>";
-				}
-				result.innerHTML=temp;
-				}
 			}
 	</script>
 </body>

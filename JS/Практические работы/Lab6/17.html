@@ -14,6 +14,9 @@
 	<button type="button" onclick="test2()">
 		TEST 2
 	</button>
+	<button type="button" onclick="test3()">
+		TEST 3
+	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
@@ -26,7 +29,7 @@
 				let i=A;
 				let n=B;
 				while (i<=B && n>=A) {
-				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>"+"<br>";
+				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
 				i++;
 				n--;
 				}
@@ -35,7 +38,7 @@
 				let i=B;
 				let n=A;
 				while (i<=A && n>=B) {
-				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>"+"<br>";
+				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
 				i++;
 				n--;
 				}
@@ -49,15 +52,31 @@
 			if (B>=A) {
 				let n=B;
 				for (i=A; i<=B; i++) {
-				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>"+"<br>";
+				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
 				n--;
 				}
 				result.innerHTML=temp+"<tr><td>Количество строк "+((B-A)+1)+"</td></tr> ";
 			} else {
 				let n=A;
 				for (i=B; i<=A; i++) {
-				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>"+"<br>";
+				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
 				n--;
+				}
+				result.innerHTML=temp+"<tr><td>Количество строк "+((A-B)+1)+"</td></tr> ";
+			}
+		}
+		function test3() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let temp="<table>";
+			if (B>=A) {
+				for (let i=A, n=B; i<=B; i++, n--) {
+				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
+				}
+				result.innerHTML=temp+"<tr><td>Количество строк "+((B-A)+1)+"</td></tr> ";
+			} else {
+				for (let i=B, n=A; i<=A; i++, n--) {
+				temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
 				}
 				result.innerHTML=temp+"<tr><td>Количество строк "+((A-B)+1)+"</td></tr> ";
 			}

@@ -9,6 +9,8 @@
 	<p>t : <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
 		TEST
+	</button><button type="button" onclick="test2()">
+		TEST 2
 	</button>
 	<script>
 		let e=document.getElementById("inp");
@@ -19,6 +21,17 @@
 			if (t<0 || t>59) {
 				out.innerHTML="Значение t должно быть в интервале [0, 59]";
 			} else if (proc==0 || proc== 1 || proc==2 || proc==5 || proc==6 || proc==7) {
+				out.innerHTML="Зеленый";
+			} else {
+				out.innerHTML="Красный";
+			}
+		}
+		function test2() {
+			let t=parseFloat(e.value);
+			let proc=t%5;
+			if (t<0 || t>59) {
+				out.innerHTML="Значение t должно быть в интервале [0, 59]";
+			} else if (proc<3) {
 				out.innerHTML="Зеленый";
 			} else {
 				out.innerHTML="Красный";
