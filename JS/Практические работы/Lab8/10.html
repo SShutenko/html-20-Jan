@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 3</title>
+	<title>Задача 10</title>
 </head>
 <body>
 	<div id="out"></div>
@@ -15,17 +15,13 @@
 		let result=document.getElementById("out");
 		function test() {
 			let text=e.value;
-			let arr=text.split(",");
+			let arr=text.split(" ");
 			if (text=="" || text==" ") {
-				result.innerHTML="Исходная строка пуста";
-			} else if (arr[2]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+"Элемент на индексе 2 отсутствует"+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr[3]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr[5]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+"Элемент на индексе 5 отсутствует";
+				result.innerHTML="Данных нет";
 			} else {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+arr[5];
+				let del=arr.pop();
+				arr.unshift(del);
+				result.innerHTML=arr.join(" ");
 			}
 		}
 	</script>

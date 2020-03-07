@@ -12,9 +12,6 @@
 	<button type="button" onclick="test()">
 		TEST
 	</button>
-	<button type="button" onclick="test2()">
-		TEST2
-	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
@@ -25,58 +22,27 @@
 			let B=parseFloat(e2.value);
 			let C=parseFloat(e3.value);
 			let temp="";
-			if (A>0) {
+			if (A>0 || A<0) {
 				temp+=A+"*x^2";
-				out.innerHTML=temp;
-			} else if (A==0) {
-				out.innerHTML=temp;
 			} else {
-				temp+=A+"*x^2";
-				out.innerHTML=temp;
+				temp+="";
 			}
-			if (B>0) {
+			if (B>0 && A!=0) {
 				temp+="+"+B+"*x";
-				out.innerHTML=temp;
 			} else if (B==0) {
-				out.innerHTML=temp;
+				temp+="";
 			} else {
 				temp+=B+"*x";
-				out.innerHTML=temp;
 			}
-			if (C>0) {
+			if (C>0 && (A!=0 || B!=0)) {
 				temp+="+"+C;
-				out.innerHTML=temp;
 			} else if (C==0) {
-				out.innerHTML=temp;
+				temp+="";
 			} else {
 				temp+=C;
-				out.innerHTML=temp;
 			}
 			out.innerHTML=temp+"=0";
-			}
-			function test2() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
-			let C=parseFloat(e3.value);
-			let temp="";
-			if (A>0) {
-				temp+=A+"*x^2";
-			} else if (A!=0) {
-				temp+=A+"*x^2";
-			}
-			if (B>0) {
-				temp+="+"+B+"*x";
-			} else if (B!=0) {
-				temp+=B+"*x";
-			}
-			if (C>0) {
-				temp+="+"+C;
-			} else if (C!=0) {
-				temp+=C;
-
-			}
-			out.innerHTML=temp+"=0";
-			}
+		}
 	</script>
 </body>
 </html>

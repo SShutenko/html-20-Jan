@@ -2,35 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 1</title>
+	<title>Задача 25</title>
 </head>
 <body>
 	<div id="out"></div>
-	<p>A: <input type="text" id="inp"></p>
-	<p>B: <input type="text" id="inp2"></p>
+	<p>Y: <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
-		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
-			if (B>=A) {
-				let i=B;
-				let temp="";
-				while (i>=A) {
-				temp+=i+" ";
-				i--;
-			}
-				result.innerHTML="{"+temp+"}";
+			let Y=parseFloat(e.value);
+			let temp="";
+			if (Y<0 || Y>15) {
+				result.innerHTML="Значение Y должно быть в интервале [0, 15]";
 			} else {
-				result.innerHTML="Значение A должно быть не больше значения B";
+				for (i=0; i<=15; i++) {
+					if (i<Y ) {
+						temp+=" # ";
+					} else if (i>Y) {
+					temp+=" . ";
+				}
+				}
+				result.innerHTML=temp;
 			}
 		}
-		// сделать через for
 	</script>
 </body>
 </html>

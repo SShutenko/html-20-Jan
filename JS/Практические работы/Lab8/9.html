@@ -2,30 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 3</title>
+	<title>Задача 9</title>
 </head>
 <body>
 	<div id="out"></div>
-	<p>Данные : <input type="text" id="inp"></p>
+	<p>P : <input type="text" id="inp"></p>
+	<p>Q : <input type="text" id="inp2"></p>
+	<p>Данные : <input type="text" id="inp3"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
 		let result=document.getElementById("out");
 		function test() {
-			let text=e.value;
-			let arr=text.split(",");
-			if (text=="" || text==" ") {
-				result.innerHTML="Исходная строка пуста";
-			} else if (arr[2]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+"Элемент на индексе 2 отсутствует"+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr[3]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr[5]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+"Элемент на индексе 5 отсутствует";
+			let P=parseFloat(e.value);
+			let Q=parseFloat(e2.value);
+			let text=e3.value;
+			let arr=text.split(" ");
+			let temp="";
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			} else if (P>arr.length || P<0) {
+				result.innerHTML="Число P должно быть в интервале [0, размер массива)";
+			} else if (Q>arr.length || Q<0) {
+				result.innerHTML="Число Q должно быть в интервале [0, размер массива)";
 			} else {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+arr[5];
+				for(i=0; i<arr.length; i++) {
+					if (i!=P && i!=Q) {
+						temp+=arr[i]+" ";
+					} else if (i==P) {
+						temp+=arr[Q]+" ";
+					} else if (i==Q) {
+						temp+=arr[P]+" ";
+					}
+				}
+				result.innerHTML="Меняю "+arr[P]+" на "+arr[Q]+"<br>"+temp;
 			}
 		}
 	</script>

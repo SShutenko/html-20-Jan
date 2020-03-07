@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 1</title>
+	<title>Задача 24</title>
 </head>
 <body>
 	<div id="out"></div>
@@ -18,19 +18,29 @@
 		function test() {
 			let A=parseFloat(e.value);
 			let B=parseFloat(e2.value);
-			if (B>=A) {
-				let i=B;
-				let temp="";
-				while (i>=A) {
-				temp+=i+" ";
-				i--;
+			let temp="<table>";
+			if (A<0 || B<0) {
+				result.innerHTML="Вводимые значения должны быть не отрицательны";
+			} else if (A>B) {
+				for (let i=0, n=0; i<=A; i++, n++) {
+					if (n<=B) {
+						temp+="<tr><td>"+i+"</td><td>"+n+"</td></tr>";
+					} else if (n>B) {
+					temp+="<tr><td>"+i+"</td><td> </td></tr>";
+				}
 			}
-				result.innerHTML="{"+temp+"}";
-			} else {
-				result.innerHTML="Значение A должно быть не больше значения B";
+				result.innerHTML=temp;
+			} else if (A<=B) {
+				for (let i=0, n=0; i<=B; i++, n++) {
+					if (n<=A) {
+						temp+="<tr><td>"+n+"</td><td>"+i+"</td></tr>";
+					} else if (n>A) {
+						temp+="<tr><td> </td><td>"+i+"</td></tr>";
+				}
+			}
+				result.innerHTML=temp;
 			}
 		}
-		// сделать через for
 	</script>
 </body>
 </html>

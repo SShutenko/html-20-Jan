@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 15</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp3"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e3=document.getElementById("inp3");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e3.value;
+			let arr=text.split(" ");
+			let temp="";
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			}
+			
+		}
+	</script>
+</body>
+</html>

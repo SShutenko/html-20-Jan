@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 8</title>
+	<title>Задача 10</title>
 </head>
 <body>
-	<canvas id="square" width="300" height="300"></canvas>
+	<canvas id="square" width="350" height="350"></canvas>
 	<button type="button" onclick="test1()">
 		TEST1
 	</button>
@@ -16,7 +16,7 @@
 		function test1() {
 			let sq=document.getElementById("square");
 			let square=sq.getContext("2d");
-			square.moveTo(50,80);начало
+			square.moveTo(50,80);
 			square.lineTo(80,80);
 			square.lineTo(80,50);
 			square.lineTo(140,50);
@@ -31,14 +31,16 @@
 			square.lineTo(290,80);
 			square.lineTo(320,80);
 			for (i=0; i<=120; i+30) {
-			square.lineTo(320-i,170+i);
-			square.lineTo(290,170);
-			square.lineTo(290,200);конец
+				square.lineTo(320-i,170+i);
+				square.lineTo(290-i,170+i);
 			}
-			square.lineTo(290,50);
-			square.lineTo(290,50);
-			square.strokeStyle = "#FF0000";
-			square.lineWidth = "2";
+			for (i=0; i<=90; i-30) {
+				square.lineTo(170-i,260-i);
+				square.lineTo(140-i,260-i);
+			}
+			square.lineTo(50,80);
+			square.strokeStyle="#FF0000";
+			square.lineWidth="2";
 			square.stroke();
 		}
 		function cleard() {

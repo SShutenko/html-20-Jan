@@ -2,60 +2,41 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 15</title>
+	<title>Задача 3</title>
 </head>
 <body>
-	<div id="out"></div>
-	<p>A: <input type="text" id="inp"></p>
-	<p>B: <input type="text" id="inp2"></p>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>W : <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
-		TEST 1
-	</button>
-	<button type="button" onclick="test2()">
-		TEST 2
+		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
-		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
-			let temp="";
-			if (B==A) {
-				result.innerHTML="Границы равны <br>"+A;
-			} else if (B>A) {
-				let i=A;
-				while (i<=B) {
-				temp+=i+" ";
-				i++;
-				}
-				result.innerHTML="От A до B"+"<br>"+temp;
+			let W=parseFloat(e.value);
+			let tempa="";
+			let tempb="";
+			let tempc="";
+			let tempd="";
+			let tempe="";
+			let tempf="";
+			let tempg="";
+			let temph="";
+			if (W<0 || W>20) {
+				result.innerHTML="Значение W должно быть в интервале [0, 20]";
 			} else {
-				let i=B;
-				while (i<=A) {
-				temp+=i+" ";
-				i++;
+				for (i=0; i<W; i++) {
+					tempa+="a";
+					tempb+="b";
+					tempc+="c";
+					tempd+="d";
+					tempe+="e";
+					tempf+="f";
+					tempg+="g";
+					temph+="h";
 				}
-				result.innerHTML="От B до A"+"<br>"+temp;
-			}
-		}
-		function test2() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
-			let temp="";
-			if (B==A) {
-				result.innerHTML="Границы равны <br>"+A;
-			} else if (B>A) {
-				for (i=A; i<=B; i++) {
-				temp+=i+" ";
-				}
-				result.innerHTML="От A до B"+"<br>"+temp;
-			} else {
-				for (i=B; i<=A; i++) {
-				temp+=i+" ";
-				}
-				result.innerHTML="От B до A"+"<br>"+temp;
+				result.innerHTML=tempa+"<br>"+tempb+"<br>"+tempc+"<br>"+tempd+"<br>"+tempe+"<br>"+tempf+"<br>"+tempg+"<br>"+temph;
 			}
 		}
 	</script>

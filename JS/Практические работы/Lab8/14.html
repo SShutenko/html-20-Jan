@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 14</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp3"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e3=document.getElementById("inp3");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e3.value;
+			let arr=text.split(" ");
+			let arrnew="";
+			let temp="";
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			} else {
+			for (i=0; i<arr.length; i++) {
+				if (i%2!=0) {
+					temp+=arr.slice(i, i+1)+" ";
+				}
+				}
+			}
+			for (i=0; i<arr.length; i++) {
+				if (i%2==0) {
+					temp+=arr.slice(i, i+1)+" ";
+				}
+				arrnew=temp;
+				}
+				result.innerHTML=arrnew;
+		}
+	</script>
+</body>
+</html>

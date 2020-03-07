@@ -8,15 +8,21 @@
 	<div id="out"></div>
 	<p>A: <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
-		TEST
+		TEST 1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
 	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let result=document.getElementById("out");
 		function test() {
 			let A=parseFloat(e.value);
-				let i=2;
-				let temp="";
+			let i=2;
+			let temp="";
+			if (A<=0) {
+				result.innerHTML="Значение X должно быть положительным";
+			} else {
 				while (i<=A) {
 					if (A%i==0){
 						temp+=i+" ";
@@ -24,8 +30,22 @@
 					i++;
 				}
 				result.innerHTML="1 "+temp;
+				}
+		}
+		function test2() {
+			let A=parseFloat(e.value);
+			let temp="";
+			if (A<=0) {
+				result.innerHTML="Значение X должно быть положительным";
+			} else {
+				for (i=1; i<=A; i++) {
+					if (A%i==0){
+						temp+=i+" ";
+					}
+				}
+				result.innerHTML=temp;
 			}
-		// сделать через for
+		}
 	</script>
 </body>
 </html>

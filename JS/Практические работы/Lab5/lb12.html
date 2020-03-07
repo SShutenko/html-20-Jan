@@ -36,24 +36,24 @@
 			let Y2=parseFloat(e5.value);
 			let H2=parseFloat(e6.value);
 			let W2=parseFloat(e7.value);
-			if (X1<0 || X2<0) {
-				out.innerHTML=`Значение X должно быть больше, либо равно 0!`
-			} else if (Y1<0 || Y2<0) {
-				out.innerHTML=`Значение Y должно быть больше, либо равно 0!`
+			let W3="0";
+			if (X1<0 || X2<0 || Y1<0 || Y2<0) {
+				out.innerHTML=`Координаты должны быть больше, либо равны 0!`
 			} else if (H1<0 || H2<0) {
 				out.innerHTML=`Значение H должно быть положительным!`
 			} else if (W1<0 || W2<0) {
 				out.innerHTML=`Значение W должно быть положительным!`
-			} else if (X1+W1>=X2 && Y1==Y2) {
-				out.innerHTML="не пересекаются";
-			} else if (X1+W1<=X2 && Y1==Y2) {
-				out.innerHTML="не пересекаются";
-			} else if (X1==X2 && Y1+H1<=Y2) {
-				out.innerHTML="не пересекаются";
-			} else if (X1==X2 && Y1+H1>=Y2) {
-				out.innerHTML="не пересекаются";
+			}
+			if ((X1<=X2 && X1+W1>X2) && (Y1<=Y2 && Y1+H1>Y2)) {
+				out.innerHTML="пересекаются"+W3;
+			} else if ((X1<=X2 && X1+W1>X2) && (Y1>=Y2 && Y2+H2>Y1)) {
+				out.innerHTML="пересекаются"+W3;
+			} else if ((X1>=X2 && X2+W2>X1) && (Y1<=Y2 && Y1+H1>Y2)) {
+				out.innerHTML="пересекаются"+W3;
+			} else if ((X1>=X2 && X2+W2>X1) && (Y1>=Y2 && Y2+H2>Y1)) {
+				out.innerHTML="пересекаются"+W3;
 			} else {
-				out.innerHTML="хохохо пересекаются";
+				out.innerHTML="хохохо не пересекаются";
 			}
 			}
 	</script>

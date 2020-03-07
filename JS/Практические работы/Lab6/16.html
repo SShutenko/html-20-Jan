@@ -14,6 +14,9 @@
 	<button type="button" onclick="test2()">
 		TEST 2
 	</button>
+	<button type="button" onclick="test3()">
+		TEST 3
+	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
@@ -56,6 +59,27 @@
 				temp+=i+" ";
 				}
 				result.innerHTML="В порядке убывания <br>"+temp;
+			}
+		}
+		function test3() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let temp="";
+			let begin="";
+			let gin="";
+			let distance="";
+			if (B>A) {
+				begin=A; gin=B; distance="В порядке возрастания";
+			} else {
+				begin=B; gin=A; distance="В порядке убывания";
+			}
+			for (i=begin, n=gin; i<=gin; i++, n--) {
+				if (B<=A) {
+					temp+=n+" ";
+				} else {
+					temp+=i+" ";
+				}
+				result.innerHTML=distance+"<br>"+temp;
 			}
 		}
 	</script>

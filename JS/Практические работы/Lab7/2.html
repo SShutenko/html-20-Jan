@@ -2,60 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 15</title>
+	<title>Задача 2</title>
 </head>
 <body>
-	<div id="out"></div>
-	<p>A: <input type="text" id="inp"></p>
-	<p>B: <input type="text" id="inp2"></p>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>W : <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
-		TEST 1
-	</button>
-	<button type="button" onclick="test2()">
-		TEST 2
+		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
-		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
+			let W=parseFloat(e.value);
 			let temp="";
-			if (B==A) {
-				result.innerHTML="Границы равны <br>"+A;
-			} else if (B>A) {
-				let i=A;
-				while (i<=B) {
-				temp+=i+" ";
-				i++;
-				}
-				result.innerHTML="От A до B"+"<br>"+temp;
+			let tempA="";
+			let tempB="";
+			if (W<0) {
+				result.innerHTML="Значение W должно быть неотрицательно";
+			} else if (W==0) {
+				result.innerHTML=" ";
+			}else if (W==1) {
+				result.innerHTML="+<br>|<br>+";
+			} else if (W==2) {
+				result.innerHTML="++<br>||<br>++";
 			} else {
-				let i=B;
-				while (i<=A) {
-				temp+=i+" ";
-				i++;
+				for (i=0; i<W-2; i++) {
+					temp+="-";
+					tempA+=".";
+					tempB+="-";
 				}
-				result.innerHTML="От B до A"+"<br>"+temp;
-			}
-		}
-		function test2() {
-			let A=parseFloat(e.value);
-			let B=parseFloat(e2.value);
-			let temp="";
-			if (B==A) {
-				result.innerHTML="Границы равны <br>"+A;
-			} else if (B>A) {
-				for (i=A; i<=B; i++) {
-				temp+=i+" ";
-				}
-				result.innerHTML="От A до B"+"<br>"+temp;
-			} else {
-				for (i=B; i<=A; i++) {
-				temp+=i+" ";
-				}
-				result.innerHTML="От B до A"+"<br>"+temp;
+				result.innerHTML="+"+temp+"+<br>|"+tempA+"|<br>+"+tempB+"+";
 			}
 		}
 	</script>
