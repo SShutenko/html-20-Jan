@@ -6,17 +6,19 @@
 </head>
 <body>
 	<div id="out"></div>
-	<p>X<sub>1</sub> : <input type="text" id="inp"></p>
-	<p>Y<sub>1</sub> : <input type="text" id="inp1"></p>
-	<p>H<sub>1</sub> : <input type="text" id="inp2"></p>
-	<p>W<sub>1</sub> : <input type="text" id="inp3"></p>
-	<p>X<sub>2</sub> : <input type="text" id="inp4"></p>
-	<p>Y<sub>2</sub> : <input type="text" id="inp5"></p>
-	<p>H<sub>2</sub> : <input type="text" id="inp6"></p>
-	<p>W<sub>2</sub> : <input type="text" id="inp7"></p>
+	<p>X<sub>1</sub> : <input type="range" id="inp"onchange="test()"></p>
+	<p>Y<sub>1</sub> : <input type="range" id="inp1"onchange="test()"></p>
+	<p>H<sub>1</sub> : <input type="range" id="inp2"onchange="test()"></p>
+	<p>W<sub>1</sub> : <input type="range" id="inp3"onchange="test()"></p>
+	<p>X<sub>2</sub> : <input type="range" id="inp4"onchange="test()"></p>
+	<p>Y<sub>2</sub> : <input type="range" id="inp5"onchange="test()"></p>
+	<p>H<sub>2</sub> : <input type="range" id="inp6"onchange="test()"></p>
+	<p>W<sub>2</sub> : <input type="range" id="inp7"onchange="test()"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
+	<svg width="800" height="600" id="svg">
+	</svg>
 	<script>
 		let e=document.getElementById("inp");
 		let e1=document.getElementById("inp1");
@@ -27,6 +29,7 @@
 		let e6=document.getElementById("inp6");
 		let e7=document.getElementById("inp7");
 		let out=document.getElementById("out");
+		let svg=document.getElementById("svg");
 		function test() {
 			let X1=parseFloat(e.value);
 			let Y1=parseFloat(e1.value);
@@ -36,7 +39,6 @@
 			let Y2=parseFloat(e5.value);
 			let H2=parseFloat(e6.value);
 			let W2=parseFloat(e7.value);
-			let W3="0";
 			if (X1<0 || X2<0 || Y1<0 || Y2<0) {
 				out.innerHTML=`Координаты должны быть больше, либо равны 0!`
 			} else if (H1<0 || H2<0) {
@@ -44,18 +46,36 @@
 			} else if (W1<0 || W2<0) {
 				out.innerHTML=`Значение W должно быть положительным!`
 			}
-			if ((X1<=X2 && X1+W1>X2) && (Y1<=Y2 && Y1+H1>Y2)) {
-				out.innerHTML="пересекаются"+W3;
-			} else if ((X1<=X2 && X1+W1>X2) && (Y1>=Y2 && Y2+H2>Y1)) {
-				out.innerHTML="пересекаются"+W3;
-			} else if ((X1>=X2 && X2+W2>X1) && (Y1<=Y2 && Y1+H1>Y2)) {
-				out.innerHTML="пересекаются"+W3;
-			} else if ((X1>=X2 && X2+W2>X1) && (Y1>=Y2 && Y2+H2>Y1)) {
-				out.innerHTML="пересекаются"+W3;
-			} else {
-				out.innerHTML="хохохо не пересекаются";
+			let temp="";//точки пересечения по x
+			let wid="";//точки пересечения по x
+			let temp2="";
+			let hid="";
+			if (X1<=X2 && X1+W1>X2) {
+				temp=X2; wid=W1+X1;
+			} else if (X1<=X2 && X2+W2>X1) {
+				temp=X2; wid=W2+X2;
+			} else if (X1>=X2 && X2+W2>X1){
+				temp=X1; wid=W2+X2;
+			} else if (X1>=X2 && X1+W1>X2){
+				temp=X1; wid=W1+X1;
 			}
+			if (Y1<=Y2 && Y1+H1>Y2) {
+				temp2=Y2; hid=H1+Y1;
+			} else if (Y1<=Y2 && Y2+H2>Y1) {
+				temp2=Y1; hid=H2+Y2;
+			} else if (Y1>=Y2 && Y2+H2>Y1){
+				temp2=Y2; hid=H2+Y2;
+			} else if (Y1>=Y2 && Y1+H1>Y2){
+				temp2=Y1; hid=H1+Y1;
 			}
+			if (temp!="" && wid!="" && temp2!="" && hid!="") {
+				let w=wid-temp;
+				let h=hid-temp2;
+				out.innerHTML="{"+'"x":'+wid+'; "y":'+temp2+'; "w":'+w+'"h":'+h+"}";
+			svg.innerHTML=`<rect x='${X1}' y='${Y1}' width='${W1}' height='${H1}' style="fill:blue"/>`+`<rect x='${X2}' y='${Y2}' width='${W2}' height='${H2}'/>`+`<rect x='${temp}' y='${temp2}' width='${w}' height='${h}' style="fill:red"/>`	
+			}
+			
+		}
 	</script>
 </body>
 </html>

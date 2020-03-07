@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 3</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>W : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let W=parseFloat(e.value);
+			let temp="";
+			let g=0;
+			if (W<0 || W>20) {
+				result.innerHTML="Значение W должно быть в интервале [0, 20]";
+			} else {
+			for (g=0; g<10; g++) {
+				for (i=0; i<W; i++) {
+					temp+=g;
+				} 
+				temp+="<br>";
+			}
+				result.innerHTML=temp;
+			}
+		}
+	</script>
+</body>
+</html>

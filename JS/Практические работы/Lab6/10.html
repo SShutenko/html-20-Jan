@@ -16,6 +16,8 @@
 		function test1() {
 			let sq=document.getElementById("square");
 			let square=sq.getContext("2d");
+			square.lineWidth="2";
+			square.strokeStyle="#FF0000";
 			square.moveTo(50,80);
 			square.lineTo(80,80);
 			square.lineTo(80,50);
@@ -30,17 +32,15 @@
 			square.lineTo(290,50);
 			square.lineTo(290,80);
 			square.lineTo(320,80);
-			for (i=0; i<=120; i+30) {
-				square.lineTo(320-i,170+i);
-				square.lineTo(290-i,170+i);
+			for (i=0; i<=4; i++) {
+				square.lineTo(320-i*30,170+i*30);
+				square.lineTo(290-i*30,170+i*30);
 			}
-			for (i=0; i<=90; i-30) {
+			for (i=0; i<=90; i+=30) {
 				square.lineTo(170-i,260-i);
 				square.lineTo(140-i,260-i);
 			}
 			square.lineTo(50,80);
-			square.strokeStyle="#FF0000";
-			square.lineWidth="2";
 			square.stroke();
 		}
 		function cleard() {
