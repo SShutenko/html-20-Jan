@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 12</title>
+</head>
+<body>
+	<canvas id="square" width="350" height="350"></canvas>
+	<button type="button" onclick="test1()">
+		TEST
+	</button>
+	<button type="button" onclick="cleard()">
+		CLEAR
+	</button>
+	<script>
+		function test1() {
+			let sq=document.getElementById("square");
+			let square=sq.getContext("2d");
+			square.lineWidth="2";
+			square.strokeStyle="#FF0000";
+			square.moveTo(60,180);
+			for (i=0; i<=4; i++) {
+				square.lineTo(30+i*30,180-i*30);
+				square.lineTo(30+i*30,150-i*30);
+			}
+			for (i=0; i<=4; i++) {
+				square.lineTo(150+i*30,30+i*30);
+				square.lineTo(180+i*30,30+i*30);
+			}
+			square.lineTo(300,180);
+			square.lineTo(270,180);
+			square.lineTo(270,300);
+			square.lineTo(60,300);
+			square.lineTo(60,180);
+			square.stroke();
+			square.moveTo(90,300);
+			square.lineTo(90,210);
+			square.lineTo(150,210);
+			square.lineTo(150,300);
+			square.stroke();
+			square.moveTo(240,300);
+			square.lineTo(240,210);
+			square.lineTo(180,210);
+			square.lineTo(180,270);
+			square.lineTo(240,270);
+			square.stroke();
+		}
+		function cleard() {
+			square.width=square.width;
+		}
+	</script>
+</body>
+</html>

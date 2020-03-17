@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 8</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>S : <input type="text" id="inp1"></p>
+	<p>H : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e1=document.getElementById("inp1");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let S=e1.value;
+			let H=parseFloat(e2.value);
+			let temp="";
+			let g="";
+			if (H<=0) {
+				result.innerHTML="Значение H должно быть неотрицательно";
+			} else {
+			for (g=1; g<=H; g++) {
+				for (i=0; i<g; i++) {
+					temp+=S;
+				}
+				temp+="<br>";
+			}
+				result.innerHTML=temp;
+			}
+			}
+	</script>
+</body>
+</html>

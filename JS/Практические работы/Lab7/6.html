@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 6</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>S : <input type="text" id="inp"></p>
+	<p>W : <input type="text" id="inp1"></p>
+	<p>H : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e1=document.getElementById("inp1");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let S=e.value;
+			let W=parseFloat(e1.value);
+			let H=parseFloat(e2.value);
+			let temp="";
+			if (W<0) {
+				result.innerHTML="Значение W должно быть неотрицательно";
+			} else {
+			for (g=0; g<H; g++) {
+				for (i=0; i<W; i++) {
+					temp+=S;
+				}
+				temp+="<br>";
+			}
+				result.innerHTML=temp;
+			}
+		}
+	</script>
+</body>
+</html>

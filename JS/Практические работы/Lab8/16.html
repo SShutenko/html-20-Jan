@@ -2,37 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 11</title>
+	<title>Задача 16</title>
 </head>
 <body>
 	<div id="out"></div>
-	<p>S : <input type="text" id="inp"></p>
 	<p>Данные : <input type="text" id="inp3"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
-		let e=document.getElementById("inp");
 		let e3=document.getElementById("inp3");
 		let result=document.getElementById("out");
 		function test() {
-			let S=parseFloat(e.value);
-			let text=e3.value;
-			let arr=text.split(" ");
+			let X=e3.value;
+			let arr=[11, 13, 17, 19, 10, 12, 14, 15, 16, 18, 20]
 			let temp="";
-			if (text=="") {
-				result.innerHTML="Нет данных";
-			}
-			if (S<1 || S>arr.length-1) {
-				result.innerHTML="Количество позиций при сдвиге должно быть в интервале [1, длина массива)";
-			} else {
-				for (i=1; i<=S; i++) {
-					let del=arr.pop();
-					arr.unshift(del);
-					temp+=arr.join(" ")+"<br>";
+			for (i=0; i<arr.length; i++) {
+				temp+=arr[i];
+				if (arr[i]==X) {
+					temp+="+";
 				}
-				result.innerHTML=temp;
+				temp+="<br>";
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

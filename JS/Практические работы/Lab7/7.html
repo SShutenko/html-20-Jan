@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 7</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>W : <input type="text" id="inp1"></p>
+	<p>H : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e1=document.getElementById("inp1");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let W=parseFloat(e1.value);
+			let H=parseFloat(e2.value);
+			let temp="";
+			let g="";
+			if (W<=0 || H<=0) {
+				result.innerHTML="Значения должны быть неотрицательны";
+			} else {
+				for (n=0; n<=W; n++) {
+					if (n==0) {
+						temp+=" ";
+					} else {
+						temp+=n-1;
+					}
+				}
+				temp+="<br>";
+			for (g=0; g<H; g++) {
+				for (i=0; i<=W; i++) {
+					if (i==0) {
+						temp+=g;
+					} else {
+						temp+=".";
+					}
+				}
+				temp+="|<br>";
+				}
+				for (z=0; z<=W; z++) {
+					if (z==0) {
+						temp+=" ";
+					} else {
+						temp+="-";
+					}
+				}
+			}
+				result.innerHTML=temp;
+			}
+	</script>
+</body>
+</html>

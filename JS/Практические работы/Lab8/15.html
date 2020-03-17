@@ -14,13 +14,17 @@
 		let e3=document.getElementById("inp3");
 		let result=document.getElementById("out");
 		function test() {
-			let text=e3.value;
-			let arr=text.split(" ");
+			let X=e3.value;
+			let arr=["a","b","c","d","e","f","g","h"]
 			let temp="";
-			if (text=="") {
-				result.innerHTML="Нет данных";
+			for (i=0; i<arr.length; i++) {
+				temp+=arr[i];
+				if (arr[i]==X) {
+					temp+="+";
+				}
+				temp+="<br>";
 			}
-			
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

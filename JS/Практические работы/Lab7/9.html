@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 9</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let temp="";
+			let H="";
+			let small="";
+			let big="";
+			if (A>B) {
+				big=A;
+				small=B;
+			} else {
+				big=B;
+				small=A;
+			}
+			H=Math.abs(A-B);
+			for (g=0; g<=H; g++) {
+				if (g%2!=0) {
+					for (i=small; i<=big; i++) {
+						if (i%2!=0 ) {
+							temp+=i;
+						}
+					}
+					temp+="<br>";
+				}
+			}
+			result.innerHTML=temp;
+		}
+	</script>
+</body>
+</html>
