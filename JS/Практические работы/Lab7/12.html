@@ -2,32 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 3</title>
+	<title>Задача 12</title>
 </head>
 <body>
 	<div id="out" style="white-space: pre; font-family: monospace;"></div>
-	<p>W : <input type="text" id="inp"></p>
+	<p>P : <input type="text" id="inp"></p>
+	<p>Q : <input type="text" id="inp2"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let W=parseFloat(e.value);
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
 			let temp="";
-			let g=0;
-			if (W<0 || W>20) {
-				result.innerHTML="Значение W должно быть в интервале [0, 20]";
-			} else {
-			for (g=0; g<10; g++) {
-				for (i=0; i<W; i++) {
-					temp+=g;
-				} 
-				temp+="<br>";
+			let biggest="";
+			let little="";
+			let ost="";
+			if (A==B) {
+				result.innerHTML=A;
+			} else if (B>A) {
+				biggest=B; little=A;
+			} else if (B<A) {
+				biggest=A; little=B;
 			}
-				result.innerHTML=temp;
+			ost=Math.floor((biggest-little)/2);
+			for (i=little; i<=biggest; i++) {
+				for (n=0; n<1; n++) {
+					temp+=i;
+				}
+				if(i>=little+ost && i<=biggest-1) {
+				temp+=">";
+				} else if (i<little+ost) {
+					temp+="<";
+				}
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

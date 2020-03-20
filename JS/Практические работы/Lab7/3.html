@@ -8,7 +8,10 @@
 	<div id="out" style="white-space: pre; font-family: monospace;"></div>
 	<p>W : <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
-		TEST
+		TEST 1
+	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
 	</button>
 	<script>
 		let e=document.getElementById("inp");
@@ -37,6 +40,22 @@
 					temph+="h";
 				}
 				result.innerHTML=tempa+"<br>"+tempb+"<br>"+tempc+"<br>"+tempd+"<br>"+tempe+"<br>"+tempf+"<br>"+tempg+"<br>"+temph;
+			}
+		}
+		function test2() {
+			let W=parseFloat(e.value);
+			let temp="";
+			let arr=["a", "b", "c", "d", "e", "f", "g", "h"];
+			if (W<0 || W>20) {
+				result.innerHTML="Значение W должно быть в интервале [0, 20]";
+			} else {
+				for (i=0; i<arr.length; i++) {
+					for (g=0; g<W; g++) {
+						temp+=arr[i];
+					}
+					temp+="<br>";
+				}
+				result.innerHTML=temp;
 			}
 		}
 	</script>

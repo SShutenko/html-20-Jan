@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 8</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>Данные : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e.value;
+			let arr=text.split(" ");
+			let temp="";
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			} else if (arr.length==1) {
+				result.innerHTML="BEGIN "+arr[0]+" END";
+			} else {
+				for (i=-1, n=0, z=1; i<arr.length; i++, n++, z++) {
+				if (i==-1) {
+					temp+="BEGIN "+arr[n]+" "+arr[z]+"<br>";
+				} else if (i==arr.length-1) {
+					temp+="";
+				} else if (z>=arr.length) {
+					temp+=arr[i]+" "+arr[n]+" "+"END";
+				} else {
+					temp+=arr[i]+" "+arr[n]+" "+arr[z]+"<br>";
+				}
+				result.innerHTML=temp;
+			}
+			}
+		}
+	</script>
+</body>
+</html>

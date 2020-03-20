@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 12</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp3"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
+	</button>
+	<script>
+		let e3=document.getElementById("inp3");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e3.value;
+			let arr=text.split(" ");
+			let temp="";
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			} else {
+				for (i=arr.length-1; i>=0; i--) {
+					temp+=arr[i]+" ";
+				}
+				result.innerHTML=temp;
+			}
+		}
+		function test2() {
+			let text=e3.value;
+			let arr=text.split(" ");
+			let temp="";
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			} else {
+				arr.reverse()
+				}
+				result.innerHTML=arr. join(" ");
+		}
+	</script>
+</body>
+</html>

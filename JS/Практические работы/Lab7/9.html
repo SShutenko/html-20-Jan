@@ -19,26 +19,27 @@
 			let A=parseFloat(e.value);
 			let B=parseFloat(e2.value);
 			let temp="";
-			let H="";
 			let small="";
 			let big="";
 			if (A>B) {
 				big=A;
 				small=B;
-			} else {
+			} else if (B>A) {
 				big=B;
 				small=A;
 			}
-			H=Math.abs(A-B);
-			for (g=0; g<=H; g++) {
-				if (g%2!=0) {
-					for (i=small; i<=big; i++) {
-						if (i%2!=0 ) {
-							temp+=i;
-						}
-					}
-					temp+="<br>";
+			for (i=small; i<=big; i++) {
+				if (i%2!=0) {
+					temp+=i+" ";
 				}
+			}
+			let arr=temp.split(" ");
+			temp="";
+			for (i=0; i<arr.length-1; i++) {
+				for(n=0; n<i; n++) {
+					temp+=".";
+				}
+				temp+=arr[i]+"<br>";
 			}
 			result.innerHTML=temp;
 		}

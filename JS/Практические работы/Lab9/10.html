@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 10</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e.value;
+			let arr=text.split(" ");
+			if (text=="" || text==" ") {
+				result.innerHTML="Данных нет";
+			} else {
+				let del=arr.pop();
+				arr.unshift(del);
+				result.innerHTML=arr.join(" ");
+			}
+		}
+	</script>
+</body>
+</html>

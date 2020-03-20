@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 3</title>
+	<title>Задача 11</title>
 </head>
 <body>
 	<div id="out" style="white-space: pre; font-family: monospace;"></div>
-	<p>W : <input type="text" id="inp"></p>
+	<p>A : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp2"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let W=parseFloat(e.value);
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
 			let temp="";
-			let g=0;
-			if (W<0 || W>20) {
-				result.innerHTML="Значение W должно быть в интервале [0, 20]";
-			} else {
-			for (g=0; g<10; g++) {
-				for (i=0; i<W; i++) {
-					temp+=g;
-				} 
-				temp+="<br>";
+			let biggest="";
+			let little="";
+			if (A>B) {
+				biggest=A; little=B;
+			} else if (B>A) {
+				biggest=B; little=A;
 			}
-				result.innerHTML=temp;
+			for (i=little; i<=biggest; i++) {
+				for (n=0; n<1; n++) {
+					if (i%2!=0) {
+						temp+=i;
+					}
+				}
+				if(i%2!=0 && i<=biggest-2) {
+				temp+=",";
+				}
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>
