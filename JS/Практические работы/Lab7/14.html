@@ -2,30 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 3</title>
+	<title>Задача 14</title>
 </head>
 <body>
 	<div id="out" style="white-space: pre; font-family: monospace;"></div>
-	<p>W : <input type="text" id="inp"></p>
+	<p>S1 : <input type="text" id="inp"></p>
+	<p>S2 : <input type="text" id="inp2"></p>
+	<p>W : <input type="text" id="inp3"></p>
+	<p>H : <input type="text" id="inp4"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let e3=document.getElementById("inp3");
+		let e4=document.getElementById("inp4");
 		let result=document.getElementById("out");
 		function test() {
-			let W=parseFloat(e.value);
+			let S1=e.value;
+			let S2=e2.value;
+			let W=parseFloat(e3.value);
+			let H=parseFloat(e4.value);
 			let temp="";
-			let g=0;
-			if (W<0 || W>20) {
-				result.innerHTML="Значение W должно быть в интервале [0, 20]";
+			if (W==0 || H==0) {
+				result.innerHTML="Пустая строка";
+			} else if (W<0 || H<0) {
+				result.innerHTML="Вводимые значения должны быть неотрицательны";
 			} else {
-			for (g=0; g<10; g++) {
-				for (i=0; i<W; i++) {
-					temp+=g;
-				} 
-				temp+="<br>";
-			}
+				for (i=1; i<=H; i++) {
+					for (n=1; n<=W; n++) {
+						if (n%2!=0) {
+							temp+=S1;
+						} else {
+							temp+=S2;
+						}
+					}
+					temp+="<br>";
+				}
 				result.innerHTML=temp;
 			}
 		}
