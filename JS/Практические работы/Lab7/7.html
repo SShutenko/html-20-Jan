@@ -11,6 +11,9 @@
 	<button type="button" onclick="test()">
 		TEST
 	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
+	</button>
 	<script>
 		let e1=document.getElementById("inp1");
 		let e2=document.getElementById("inp2");
@@ -50,6 +53,30 @@
 				}
 			}
 				result.innerHTML=temp;
+			}
+		function test2() {
+			let W=parseFloat(e1.value);
+			let H=parseFloat(e2.value);
+			let temp=" ";
+			if (W<=0 || H<=0) {
+				result.innerHTML="Значения должны быть неотрицательны";
+			}
+			for (i=0; i<W; i++) {
+				temp+=i;
+			}
+			temp+="<br>";
+			for (i=0; i<H; i++) {
+				temp+=i;
+				for (n=0; n<W; n++) {
+						temp+=".";
+				}
+				temp+="|<br>";
+			}
+			temp+=" ";
+			for (i=0; i<W; i++) {
+				temp+="-";
+			}
+			result.innerHTML=temp;
 			}
 	</script>
 </body>

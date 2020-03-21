@@ -11,6 +11,9 @@
 	<button type="button" onclick="test()">
 		TEST
 	</button>
+		<button type="button" onclick="test2()">
+		TEST 2
+	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
@@ -34,6 +37,27 @@
 				}
 				if(i%2!=0 && i<=biggest-2) {
 				temp+=",";
+				}
+			}
+			result.innerHTML=temp;
+		}
+		function test2() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let temp="";
+			let biggest="";
+			let little="";
+			if (A>B) {
+				biggest=A; little=B;
+			} else if (B>A) {
+				biggest=B; little=A;
+			}
+			for (i=little; i<=biggest; i++) {
+				if (i%2!=0) {
+						temp+=i;
+						if (i<=biggest-2) {
+							temp+=",";
+						}
 				}
 			}
 			result.innerHTML=temp;

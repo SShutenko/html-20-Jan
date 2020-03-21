@@ -10,6 +10,9 @@
 	<button type="button" onclick="test()">
 		TEST
 	</button>
+		<button type="button" onclick="test2()">
+		TEST 2
+	</button>
 	<script>
 		let e3=document.getElementById("inp3");
 		let result=document.getElementById("out");
@@ -31,6 +34,24 @@
 				}
 			}
 			result.innerHTML=m3.join("");
+		}
+		function test2() {
+			let text=e3.value;
+			let arr=text.split(" ");
+			let temp="";
+			let m1=["?", "А", "Б", "В", "Г", "Д", "Е", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Ъ", "Ы", "Ь", "Э", "Ю", "Я", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+			let m2=["..--..", ".-", "-...", ".--", "--.", "-..", ".", "...-", "--..", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", ".-.", "...", "-", "..-", "..-.", "....", "-.-.", "---.", "----", "--.-", "--.--", "-.--", "..-..", "..-..", "..--", ".-.-", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----"];
+			if (text=="") {
+				result.innerHTML="Нет данных";
+			}
+			for (i=0; i<arr.length; i++) {
+				for (g=0; g<m2.length; g++) {
+					if (m2[g]==arr[i]) {
+						temp+=m1[g];
+					}
+				}
+			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

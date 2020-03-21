@@ -6,38 +6,24 @@
 </head>
 <body>
 	<div id="out"></div>
-	<p>B :<input type="text" id="inp1"></p>
-	<p>E :<input type="text" id="inp2"></p>
-	<p>Данные : <input type="text" id="inp3"></p>
+	<p>Данные : <input type="text" id="inp"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
-		let e1=document.getElementById("inp1");
-		let e2=document.getElementById("inp2");
-		let e3=document.getElementById("inp3");
+		let e=document.getElementById("inp");
 		let result=document.getElementById("out");
 		function test() {
-			let B=parseFloat(e1.value);
-			let E=parseFloat(e2.value);
-			let text=e3.value;
-			let arr=text.split(" ");
-			let temp="";
-			if (text=="") {
-				result.innerHTML="Исходная строка пуста";
-			} else if (B<0 || B>arr.length-1 || E<0 || E>arr.length-1) {
-				result.innerHTML="Значения должны быть в интервале [0, размер массива)";
-			} else if (B>=E) {
-				for (i=E; i<=B; i++) {
-				temp+=arr[i]+" ";
+			let text=e.value;
+			let arr=text.split(";");
+			let temp="Значения отсортированы по возрастанию";;
+			for (i=0; i<arr.length-1; i++) {
+				if (arr[i]>arr[i+1]) {
+					temp=`Элемент со значением ${arr[i+1]} на индексе ${i+1} нарушает закономерность`;
+					break;
 				}
-				result.innerHTML=temp;
-			} else {
-				for (i=B; i<=E; i++) {
-				temp+=arr[i]+" ";
-				}
-				result.innerHTML=temp;
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

@@ -11,6 +11,9 @@
 	<button type="button" onclick="test()">
 		TEST
 	</button>
+	<button type="button" onclick="test2()">
+		TEST 2
+	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
@@ -28,18 +31,47 @@
 				big=B;
 				small=A;
 			}
+			let arr=[];
 			for (i=small; i<=big; i++) {
 				if (i%2!=0) {
-					temp+=i+" ";
+					arr.push(i);
 				}
 			}
-			let arr=temp.split(" ");
-			temp="";
-			for (i=0; i<arr.length-1; i++) {
+			for (i=0; i<arr.length; i++) {
 				for(n=0; n<i; n++) {
 					temp+=".";
 				}
 				temp+=arr[i]+"<br>";
+			}
+			result.innerHTML=temp;
+		}
+		function test2() {
+			let A=parseFloat(e.value);
+			let B=parseFloat(e2.value);
+			let temp="";
+			let small="";
+			let big="";
+			if (A>B) {
+				big=A;
+				small=B;
+			} else if (B>A) {
+				big=B;
+				small=A;
+			}
+			// перед циклом объявить счетчик (i) - переменная которая будет увеличиваться. Записать в него первое нечетное число, которое нужно вывести на экран, в теле цикла увеличивать счетчик на 2
+			let i="";
+			if (small%2==0) {
+				i=small+1;
+			} else {
+				i=small;
+			}
+			let g=0;
+			for (n=i; n<=big; n+=2) {
+				for (z=0; z<g; z++) {
+					temp+=".";
+				}
+				g++;
+				temp+=n+"<br>";
 			}
 			result.innerHTML=temp;
 		}

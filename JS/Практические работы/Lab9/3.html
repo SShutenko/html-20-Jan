@@ -6,26 +6,28 @@
 </head>
 <body>
 	<div id="out"></div>
-	<p>Данные : <input type="text" id="inp"></p>
+	<p>Данные (L) : <input type="text" id="inp"></p>
+	<p>Данные (R) : <input type="text" id="inp2"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
 			let text=e.value;
-			let arr=text.split(",");
-			if (text=="" || text==" ") {
-				result.innerHTML="Исходная строка пуста";
-			} else if (arr[2]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+"Элемент на индексе 2 отсутствует"+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr[3]===undefined) {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+"Элемент на индексе 3 отсутствует"+"<br>"+"Элемент на индексе 5 отсутствует";
-			} else if (arr.length<=5) {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+"Элемент на индексе 5 отсутствует";
+			let text2=e2.value;
+			let arr=text.split(" ");
+			let arr2=text2.split(" ");
+			let temp="";
+			if (arr.length==arr2.length) {
+				for (i=0; i<arr.length; i++) {
+					temp+=arr[i]*arr2[i]+" ";
+				}
+				result.innerHTML=temp;
 			} else {
-				result.innerHTML=arr[0]+"<br>"+arr[2]+"<br>"+arr[3]+"<br>"+arr[5];
+				result.innerHTML="Размеры массивов должны быть одинаковы";
 			}
 		}
 	</script>

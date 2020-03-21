@@ -16,13 +16,19 @@
 		function test() {
 			let text=e.value;
 			let arr=text.split(" ");
-			if (text=="" || text==" ") {
-				result.innerHTML="Данных нет";
-			} else {
-				let del=arr.pop();
-				arr.unshift(del);
-				result.innerHTML=arr.join(" ");
+			let temp=arr+"<br>";
+			for (i=0; i<arr.length-1; i++) {
+				temp+=`Шаг ${i} `
+				if (arr[i]>arr[i+1]) {
+					temp+=`Меняем ${arr[i]} и ${arr[i+1]} `;
+					[arr[i]]=[arr[i+1]];
+				} else {
+					temp+=`Оставляем ${arr[i]} и ${arr[i+1]} `;
+					
+				}
+				temp+="<br>"
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>
