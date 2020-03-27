@@ -6,25 +6,37 @@
 </head>
 <body>
 	<div id="out"></div>
-	<p>Данные : <textarea type="text" id="inp"></textarea></p>
+	<p>Данные 1 : <input type="text" id="inp"></input></p>
+	<p>Данные 2 : <input type="text" id="inp2"></input></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
 			let text=e.value;
-			let arr=text.split(",");
+			let text2=e2.value;
 			let temp="";
-			if (text=="") {
-				result.innerHTML="Исходная строка пуста";
+			if (text=="" || text2=="") {
+				temp+="Исходная строка пуста";
 			} else {
-				for (i=0; i<arr.length; i++) {
-					temp+=`Глава ${i+1} ${arr[i]}<br>`;
+				let arr=text.split(" ");
+				let arr2=text2.split(" ");
+				for (i=0; i<arr2.length; i++) {
+					for (n=0; n<arr.length; n++) {
+						if (parseFloat(arr2[i])==n) {
+							temp+=arr[n]+"<br>";
+							break;
+						} else if (parseFloat(arr2[i])>=arr.length) {
+							temp+=`Фрагмент на индексе ${parseFloat(arr2[i])} отсутствует`+"<br>";
+							break;
+						}
+					}
 				}
-				result.innerHTML=temp;
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

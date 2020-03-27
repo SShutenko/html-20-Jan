@@ -2,37 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 11</title>
+	<title>Задача 19</title>
 </head>
 <body>
 	<div id="out"></div>
-	<p>S : <input type="text" id="inp"></p>
-	<p>Данные : <input type="text" id="inp3"></p>
+	<p>Данные 1 : <input type="text" id="inp"></p>
+	<p>Данные 2 : <input type="text" id="inp2"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
-		let e3=document.getElementById("inp3");
+		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let S=parseFloat(e.value);
-			let text=e3.value;
-			let arr=text.split(" ");
+			let text=e.value;
+			let text2=e2.value;
+			let arr1=text.split(" ");
+			let arr2=text2.split(" ");
 			let temp="";
-			if (text=="") {
-				result.innerHTML="Нет данных";
-			}
-			if (S<1 || S>arr.length-1) {
-				result.innerHTML="Количество позиций при сдвиге должно быть в интервале [1, длина массива)";
-			} else {
-				for (i=1; i<=S; i++) {
-					let del=arr.pop();
-					arr.unshift(del);
-					temp+=arr.join(" ")+"<br>";
+			for (i=0; i<arr1.length; i++) {
+				if (arr1[i]!=arr2[i]) {
+					temp+=`Массивы начинают различаться на индексе ${i}`;
+					break;
 				}
-				result.innerHTML=temp;
 			}
+			result.innerHTML=temp;
 		}
 	</script>
 </body>

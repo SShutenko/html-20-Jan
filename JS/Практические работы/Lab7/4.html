@@ -2,32 +2,60 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Задача 3</title>
+	<title>Задача 4</title>
 </head>
 <body>
-	<div id="out" style="white-space: pre; font-family: monospace;"></div>
-	<p>W : <input type="text" id="inp"></p>
-	<button type="button" onclick="test()">
+	<canvas id="square" width="350" height="350"></canvas>
+	<button type="button" onclick="test1()">
 		TEST
 	</button>
+	<button type="button" onclick="cleard()">
+		CLEAR
+	</button>
 	<script>
-		let e=document.getElementById("inp");
-		let result=document.getElementById("out");
-		function test() {
-			let W=parseFloat(e.value);
-			let temp="";
-			let g=0;
-			if (W<0 || W>20) {
-				result.innerHTML="Значение W должно быть в интервале [0, 20]";
-			} else {
-			for (g=0; g<10; g++) {
-				for (i=0; i<W; i++) {
-					temp+=g;
-				} 
-				temp+="<br>";
+		function test1() {
+			let sq=document.getElementById("square");
+			let square=sq.getContext("2d");
+			square.lineWidth="2";
+			square.strokeStyle="#FF0000";
+			square.moveTo(50,80);
+			square.lineTo(80,80);
+			for (i=1; i<=10; i=i*10) {
+				
+				if (i%2!=0) {
+					square.moveTo(60-i,70-i);
+					square.lineTo(50+i,70-i);
+				} else {
+					square.moveTo(60-i,70-i);
+					square.lineTo(50+i,70-i);
+				}
+				
 			}
-				result.innerHTML=temp;
+			square.lineTo(80,50);
+			square.lineTo(140,50);
+			square.lineTo(140,80);
+			square.lineTo(170,80);
+			square.lineTo(170,110);
+			square.lineTo(200,110);
+			square.lineTo(200,80);
+			square.lineTo(230,80);
+			square.lineTo(230,50);
+			square.lineTo(290,50);
+			square.lineTo(290,80);
+			square.lineTo(320,80);
+			for (i=0; i<=4; i++) {
+				square.lineTo(320-i*30,170+i*30);
+				square.lineTo(290-i*30,170+i*30);
 			}
+			for (i=0; i<=90; i+=30) {
+				square.lineTo(170-i,260-i);
+				square.lineTo(140-i,260-i);
+			}
+			square.lineTo(50,80);
+			square.stroke();
+		}
+		function cleard() {
+			square.width=square.width;
 		}
 	</script>
 </body>

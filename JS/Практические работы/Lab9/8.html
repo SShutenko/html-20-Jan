@@ -6,34 +6,33 @@
 </head>
 <body>
 	<div id="out" style="white-space: pre; font-family: monospace;"></div>
-	<p>Данные : <input type="text" id="inp"></p>
+	<p>B : <input type="text" id="inp"></p>
+	<p>Данные : <input type="text" id="inp2"></p>
 	<button type="button" onclick="test()">
 		TEST
 	</button>
 	<script>
 		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
 		let result=document.getElementById("out");
 		function test() {
-			let text=e.value;
+			let B=parseFloat(e.value);
+			let text=e2.value;
 			let arr=text.split(" ");
 			let temp="";
-			if (text=="") {
-				result.innerHTML="Нет данных";
-			} else if (arr.length==1) {
-				result.innerHTML="BEGIN "+arr[0]+" END";
+			let arr2=[];
+			if (B<0 || B>arr.length) {
+				result.innerHTML="Число B должно быть в интервале [0, размер массива]";
 			} else {
-				for (i=-1, n=0, z=1; i<arr.length; i++, n++, z++) {
-				if (i==-1) {
-					temp+="BEGIN "+arr[n]+" "+arr[z]+"<br>";
-				} else if (i==arr.length-1) {
-					temp+="";
-				} else if (z>=arr.length) {
-					temp+=arr[i]+" "+arr[n]+" "+"END";
-				} else {
-					temp+=arr[i]+" "+arr[n]+" "+arr[z]+"<br>";
+				for (i=0; i<arr.length; i++) {
+					if (arr[i]<arr[B]) {
+						arr2+=arr[i];
+					}
+					if (i===B) {
+						temp+=`На позиции B находится ${arr[i]}`;
+					}
 				}
-				result.innerHTML=temp;
-			}
+				result.innerHTML=temp+"<br>"+`Количество меньших ${arr2.length}`;
 			}
 		}
 	</script>

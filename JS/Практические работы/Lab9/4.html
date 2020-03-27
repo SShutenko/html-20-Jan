@@ -16,12 +16,26 @@
 		function test() {
 			let text=e.value;
 			let temp="";
-			let arr=text.split(" ");
-			if (text=="") {
-				result.innerHTML="Исходная строка пуста";
+			let temp2="";
+			let big="";
+			let little="";
+			let arr=text.split(",");
+			if (arr.length%2!=0) {
+				result.innerHTML="У последнего интервала отсутствует одна из границ";
 			} else {
-				for (i=0; i<arr.length; i++) {
-					temp+=arr[i]+" "+i+"<br>";
+				for (i=0; i<arr.length; i=i+2){
+					if (parseFloat(arr[i])>parseFloat(arr[i+1])) {
+						little=arr[i+1];
+						big=arr[i];
+					} else {
+						little=arr[i];
+						big=arr[i+1];
+					}
+					temp+=`От ${little} до ${big}`;
+					if (little<=19 && big>=19) {
+						temp+="<--";
+					}
+					temp+="<br>";
 				}
 				result.innerHTML=temp;
 			}
