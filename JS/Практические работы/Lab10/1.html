@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 1</title>
+</head>
+<body>
+	<div id="out"></div>
+	<button type="button" onclick="test()">
+		TEST 1
+	</button>
+	<script>
+		let result=document.getElementById("out");
+		function test() {
+			let temp="Ход решения: ";
+			let summ=0;
+			for (i=100; i<=500; i++) {
+				summ+=i;
+				temp+=summ+" ";
+			}
+
+			result.innerHTML=temp+"<br> Ответ: "+summ;
+		}
+	</script>
+</body>
+</html>

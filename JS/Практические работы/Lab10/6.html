@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 6</title>
+</head>
+<body>
+	<div id="out"></div>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let result=document.getElementById("out");
+		function test() {
+			let count=0;
+			let temp="Ход решения: ";
+			for (i=100; i<=1000; i++) {
+				temp+=" "+i;
+				if (i%13==0) {
+					temp+="+";
+					count+=1;
+				}
+			}
+			result.innerHTML=temp+"<br> Ответ: "+count;
+		}
+	</script>
+</body>
+</html>

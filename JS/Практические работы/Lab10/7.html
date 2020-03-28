@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 7</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e.value;
+			let arr=text.split(";");
+			let temp="Значения отсортированы по возрастанию";;
+			for (i=0; i<arr.length-1; i++) {
+				if (arr[i]>arr[i+1]) {
+					temp=`Элемент со значением ${arr[i+1]} на индексе ${i+1} нарушает закономерность`;
+					break;
+				}
+			}
+			result.innerHTML=temp;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 3</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные (L) : <input type="text" id="inp"></p>
+	<p>Данные (R) : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e.value;
+			let text2=e2.value;
+			let arr=text.split(" ");
+			let arr2=text2.split(" ");
+			let temp="";
+			if (arr.length==arr2.length) {
+				for (i=0; i<arr.length; i++) {
+					temp+=arr[i]*arr2[i]+" ";
+				}
+				result.innerHTML=temp;
+			} else {
+				result.innerHTML="Размеры массивов должны быть одинаковы";
+			}
+		}
+	</script>
+</body>
+</html>

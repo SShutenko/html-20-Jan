@@ -192,18 +192,38 @@ zoom{
 		</tr>
 		<tr>
 			<td></td>
+			<td>z</td>
+			<td>Фрагмент 'z' был найден в 'abcdefwxyz'</td>
+		</tr>
+		<tr>
+			<td></td>
 			<td>bx</td>
-			<td>Не содержится</td>
+			<td>Фрагмент 'bx' отсутствует в 'abcdefwxyz'</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>fw</td>
-			<td>Содержится</td>
+			<td>Фрагмент 'fw' был найден в 'abcdefwxyz'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>abcd</td>
+			<td>Фрагмент 'abcd' был найден в 'abcdefwxyz'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>abcdefwxyz000</td>
+			<td>Фрагмент 'abcdefwxyz000' отсутствует в 'abcdefwxyz'</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>abcdefwxyz</td>
+			<td>Фрагмент 'abcdefwxyz' был найден в 'abcdefwxyz'</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>123</td>
-			<td>Не содержится</td>
+			<td>Фрагмент '123' отсутствует в 'abcdefwxyz'</td>
 		</tr>
 	</table>
 </div><div id="task9631" class="task_block empty_on_print">
@@ -219,17 +239,35 @@ zoom{
 		<tr>
 			<td></td>
 			<td>z</td>
-			<td>0</td>
+			<td class="preformatted">Фрагмент 'z' находится на индексе '9'
+Длина введенного фрагмента 1
+После него есть еще 0 символов</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>a</td>
-			<td>9</td>
+			<td class="preformatted">Фрагмент 'a' находится на индексе '0'
+Длина введенного фрагмента 1
+После него есть еще 9 символов</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>g</td>
-			<td>Значение отсутствует в строке</td>
+			<td class="preformatted">Фрагмент 'g' отсутствует в строке</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>abcd</td>
+			<td class="preformatted">Фрагмент 'abcd' находится на индексе '0'
+Длина введенного фрагмента 4
+После него есть еще 6 символов</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>wxyz</td>
+			<td class="preformatted">Фрагмент 'wxyz' находится на индексе '6'
+Длина введенного фрагмента 4
+После него есть еще 0 символов</td>
 		</tr>
 	</table>
 </div><div id="task9812" class="task_block empty_on_print">
@@ -262,13 +300,13 @@ zoom{
 			<td></td>
 			<td>g</td>
 			<td>z</td>
-			<td>Значение CA отсутствует в строке</td>
+			<td>Фрагмент 'g' отсутствует в строке</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>x</td>
 			<td>u</td>
-			<td>Значение CB отсутствует в строке</td>
+			<td>Фрагмент 'u' отсутствует в строке</td>
 		</tr>
 	</table>
 </div><div id="task9279" class="task_block empty_on_print">
@@ -439,10 +477,18 @@ zoom{
 	</table>
 </div><div id="task7222" class="task_block empty_on_print">
 	<div class="task_id">7222</div>
-	<h3>Задача</h3>
-	<div class="task_desc">Пользователь вводит цифры штрих кода в стандарте EAN-13. Расшифровать значение штрих кода.</div>
-	<table class="check_values">
-		<tr>
+    <h3>Задача</h3>
+    <div class="task_desc">Пользователь вводит цифры штрих кода в стандарте EAN-13. Расшифровать значение штрих кода.
+        Номер товара EAN-13 имеет следующую структуру:
+        <ol>
+            <li>первые 3 цифры — это префикс или код национальной организации-члена EAN International (для EAN Россия – 460-469);</li>
+            <li>следующие 6 цифр — это регистрационный номер предприятия — изготовителя;</li>
+            <li>следующая группа из 3-х цифр — это порядковый номер продукции внутри предприятия;</li>
+            <li>последняя 13-я цифра — контрольное число. Оно вычисляется из предыдущих двенадцати.</li>
+        </ol>
+    </div>
+    <table class="check_values">
+        <tr>
 			<th>Номер теста</th>
 			<th>Вводимые данные</th>
 			<th>Результат</th>
@@ -450,25 +496,25 @@ zoom{
 		<tr>
 			<td></td>
 			<td>4607009520018</td>
-			<td class="preformatted">Код страны: 46
-Код изготовителя: 700
-Код товара: 5200
+			<td class="preformatted">Код страны: 460
+Код изготовителя: 700952
+Код товара: 001
 Контрольное число: 8</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>9785750200641</td>
-			<td class="preformatted">Код страны: 97
-Код изготовителя: 575
-Код товара: 2006
+			<td class="preformatted">Код страны: 978
+Код изготовителя: 575020
+Код товара: 064
 Контрольное число: 1</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td>9785964300694</td>
-			<td class="preformatted">Код страны: 97
-Код изготовителя: 596
-Код товара: 3006
+			<td class="preformatted">Код страны: 978
+Код изготовителя: 596430
+Код товара: 069
 Контрольное число: 4</td>
 		</tr>
 		<tr>
@@ -695,7 +741,7 @@ zoom{
 		<tr><td></td><td>Щ</td><td>--.-</td></tr>
 		<tr><td></td><td>Ъ</td><td>--.--</td></tr>
 		<tr><td></td><td>Ы</td><td>-.--</td></tr>
-		<tr><td></td><td>Ь</td><td>..-..</td></tr>
+		<tr><td></td><td>Ь</td><td>--.--</td></tr>
 		<tr><td></td><td>Э</td><td>..-..</td></tr>
 		<tr><td></td><td>Ю</td><td>..--</td></tr>
 		<tr><td></td><td>Я</td><td>.-.-</td></tr>
@@ -1143,4 +1189,4 @@ remainder</td>
 			<td class="preformatted">Вложенные вызовы методов не поддерживаются</td>
 		</tr>
 	</table>
-</div>Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2019. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>
+</div>Версия 9fe321b. Подборка задач, выбор порядка подачи и подготовка тестовых данных - Крюков Александр, Омск 2013-2020. <a href='https://github.com/AKryukov92/programming-basics'>Основной репозиторий</a></body></html>

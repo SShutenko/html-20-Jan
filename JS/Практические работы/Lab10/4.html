@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 4</title>
+</head>
+<body>
+	<div id="out"></div>
+	<p>Данные : <input type="text" id="inp"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let result=document.getElementById("out");
+		function test() {
+			let text=e.value;
+			let temp="";
+			let temp2="";
+			let big="";
+			let little="";
+			let arr=text.split(",");
+			if (arr.length%2!=0) {
+				result.innerHTML="У последнего интервала отсутствует одна из границ";
+			} else {
+				for (i=0; i<arr.length; i=i+2){
+					if (parseFloat(arr[i])>parseFloat(arr[i+1])) {
+						little=arr[i+1];
+						big=arr[i];
+					} else {
+						little=arr[i];
+						big=arr[i+1];
+					}
+					temp+=`От ${little} до ${big}`;
+					if (little<=19 && big>=19) {
+						temp+="<--";
+					}
+					temp+="<br>";
+				}
+				result.innerHTML=temp;
+			}
+		}
+	</script>
+</body>
+</html>

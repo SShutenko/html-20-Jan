@@ -12,9 +12,6 @@
 	<button type="button" onclick="test()">
 		TEST
 	</button>
-	<button type="button" onclick="test2()">
-		TEST 2
-	</button>
 	<script>
 		let e=document.getElementById("inp");
 		let e2=document.getElementById("inp2");
@@ -45,26 +42,6 @@
 				result.innerHTML="Меняю "+arr[P]+" на "+arr[Q]+"<br>"+temp;
 			}
 		}
-		function test2() {
-			let P=parseFloat(e.value);
-			let Q=parseFloat(e2.value);
-			let text=e3.value;
-			let arr=text.split(" ");
-			let temp="";
-			if (text=="") {
-				result.innerHTML="Нет данных";
-			} else if (P>arr.length || P<0) {
-				result.innerHTML="Число P должно быть в интервале [0, размер массива)";
-			} else if (Q>arr.length || Q<0) {
-				result.innerHTML="Число Q должно быть в интервале [0, размер массива)";
-			} else {
-				let t="";
-				t=arr[P];
-				arr[P]=arr[Q];
-				arr[Q]=t;
-			}
-				result.innerHTML="Меняю "+arr[P]+" на "+arr[Q]+"<br>"+arr;
-			}
 	</script>
 </body>
 </html>

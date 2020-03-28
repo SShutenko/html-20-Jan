@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Задача 8</title>
+</head>
+<body>
+	<div id="out" style="white-space: pre; font-family: monospace;"></div>
+	<p>B : <input type="text" id="inp"></p>
+	<p>Данные : <input type="text" id="inp2"></p>
+	<button type="button" onclick="test()">
+		TEST
+	</button>
+	<script>
+		let e=document.getElementById("inp");
+		let e2=document.getElementById("inp2");
+		let result=document.getElementById("out");
+		function test() {
+			let B=parseFloat(e.value);
+			let text=e2.value;
+			let arr=text.split(" ");
+			let temp="";
+			let arr2=[];
+			if (B<0 || B>arr.length) {
+				result.innerHTML="Число B должно быть в интервале [0, размер массива]";
+			} else {
+				for (i=0; i<arr.length; i++) {
+					if (arr[i]<arr[B]) {
+						arr2+=arr[i];
+					}
+					if (i===B) {
+						temp+=`На позиции B находится ${arr[i]}`;
+					}
+				}
+				result.innerHTML=temp+"<br>"+`Количество меньших ${arr2.length}`;
+			}
+		}
+	</script>
+</body>
+</html>
